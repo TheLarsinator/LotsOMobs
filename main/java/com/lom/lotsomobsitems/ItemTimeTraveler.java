@@ -1,0 +1,40 @@
+package com.lom.lotsomobsitems;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+
+import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobscore.handler.ConfigHandler;
+import com.lom.lotsomobsdino.TeleporterDino;
+
+public class ItemTimeTraveler extends Item
+{
+    public ItemTimeTraveler()
+    {
+        super();
+        this.maxStackSize = 1;
+        this.setCreativeTab(LotsOMobs.LotsOMobsItemsTab);
+        this.setMaxDamage(20);      
+    }
+	
+
+public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par5Entity)
+{
+    if (par5Entity instanceof EntityPlayerMP)
+    {
+     EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
+     if (par5Entity.dimension != ConfigHandler.dimension)
+     {
+      thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigHandler.dimension, new TeleporterDino(thePlayer.mcServer.worldServerForDimension(ConfigHandler.dimension)));
+     }
+     else
+     {
+      thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TeleporterDino(thePlayer.mcServer.worldServerForDimension(0)));
+     }
+    }
+    return par1ItemStack;
+}
+}
