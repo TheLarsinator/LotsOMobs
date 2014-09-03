@@ -8,6 +8,7 @@ import net.minecraft.world.biome.BiomeGenOcean;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
+import com.lom.lotsomobsbiomes.BiomeGenAntartica;
 import com.lom.lotsomobsbiomes.BiomeGenIcePlains;
 import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
@@ -60,6 +61,24 @@ public void generateSurface(World world, Random rand, int chunkX, int chunkZ)
 	}
 	}
     if(biome instanceof BiomeGenIcePlains){
+	for (int i = 0; i < 10; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(60);
+	int randPosZ = chunkZ + rand.nextInt(16);
+	(new WorldGenMinable(LotsOMobsBlocks.IceStone, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}
+    }
+    if(biome instanceof BiomeGenAntartica){
+	for (int i = 0; i < 7; i++) {
+	int randPosX = chunkX + rand.nextInt(16);
+	int randPosY = rand.nextInt(60);
+	int randPosZ = chunkZ + rand.nextInt(16);
+	(new WorldGenMinable(LotsOMobsBlocks.IceStone, 10)).generate(world, rand,
+	randPosX, randPosY, randPosZ);
+	}
+	}
+    if(biome instanceof BiomeGenAntartica){
 	for (int i = 0; i < 10; i++) {
 	int randPosX = chunkX + rand.nextInt(16);
 	int randPosY = rand.nextInt(60);

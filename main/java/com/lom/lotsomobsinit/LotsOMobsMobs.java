@@ -23,6 +23,7 @@ import com.lom.lotsomobsentity.EntityCamel;
 import com.lom.lotsomobsentity.EntityCrab;
 import com.lom.lotsomobsentity.EntityCroco;
 import com.lom.lotsomobsentity.EntityDeer;
+import com.lom.lotsomobsentity.EntityDirtPile;
 import com.lom.lotsomobsentity.EntityEasterBunny;
 import com.lom.lotsomobsentity.EntityEasterChick;
 import com.lom.lotsomobsentity.EntityElephant;
@@ -42,6 +43,7 @@ import com.lom.lotsomobsentity.EntityKakkerlak;
 import com.lom.lotsomobsentity.EntityLion;
 import com.lom.lotsomobsentity.EntityLizard;
 import com.lom.lotsomobsentity.EntityMammoth;
+import com.lom.lotsomobsentity.EntityMole;
 import com.lom.lotsomobsentity.EntityMuskOx;
 import com.lom.lotsomobsentity.EntityNarwal;
 import com.lom.lotsomobsentity.EntityPDFrog;
@@ -390,6 +392,14 @@ public class LotsOMobsMobs
 				{
 					EntityRegistry.registerGlobalEntityID(EntityCrab.class, mobid + "Crab", EntityRegistry.findGlobalUniqueEntityId(), 0xb1360a, 0xed5523);
 			        EntityRegistry.addSpawn(EntityCrab.class, (int)ConfigHandler.CrabRate *10, 3, 5, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeTropical, BiomeGenBase.beach});				
+				}
+				if(ConfigHandler.MoleOn == true)
+				{	
+					EntityRegistry.registerGlobalEntityID(EntityMole.class, mobid + "Mole", EntityRegistry.findGlobalUniqueEntityId(), 0x7D3B0C, 0x351f0a);
+					EntityRegistry.registerGlobalEntityID(EntityDirtPile.class, mobid + "DirtPile", EntityRegistry.findGlobalUniqueEntityId(),0x7D3B0C, 0x351f0a);
+					EntityRegistry.addSpawn(EntityMole.class, (int)ConfigHandler.MoleRate *10, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills,BiomeGenBase.plains});
+					EntityRegistry.addSpawn(EntityMole.class, (int)ConfigHandler.MoleRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.PLAINS));
+
 				}
 	}
 

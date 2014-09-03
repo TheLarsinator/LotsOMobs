@@ -277,6 +277,7 @@ public class ModelGazelle extends ModelBase
     super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5);
     EntityGazelle gazelle = (EntityGazelle)entity;
+    
     if(gazelle.isSitting())
     {
     	if(this.isChild)

@@ -1,12 +1,16 @@
 package com.lom.lotsomobsachievement;
 
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityCreeper;
-import net.minecraft.util.DamageSource;
+import scala.util.Random;
+import net.minecraft.block.BlockCarrot;
+import net.minecraft.block.BlockCrops;
+import net.minecraft.block.BlockMelon;
+import net.minecraft.block.BlockPotato;
+import net.minecraft.block.BlockPumpkin;
 import net.minecraftforge.event.world.BlockEvent;
 
 import com.lom.lotsomobsblocks.BlockCoral;
 import com.lom.lotsomobscore.handler.ConfigHandler;
+import com.lom.lotsomobsentity.EntityMole;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
 import com.lom.lotsomobsinit.LotsOMobsItems;
@@ -112,6 +116,17 @@ public class LotsOMobsAchievements
 		if(event.block instanceof BlockCoral)
 		{
 			event.getPlayer().addStat(LotsOMobsAchievementsBook.AchievementCoconut, 1);
+		}
+		if(event.block instanceof BlockCrops)
+		{
+			Random rand = new Random();
+			
+			if(rand.nextInt(10)==1)
+			{
+        	EntityMole entityMole = new EntityMole(event.world);
+        	entityMole.setLocationAndAngles(event.x, event.y, event.z, 0, 0);
+        	event.world.spawnEntityInWorld(entityMole);
+			}
 		}
 	}
 	

@@ -77,6 +77,7 @@ public class ConfigHandler
 	public static boolean GazelleOn = true;
 	public static boolean SharkOn = true;
 	public static boolean CrabOn = true;
+	public static boolean MoleOn = true;
 	
 	//Spawn Rates
 	public static float DeerRate = 2.0F;
@@ -128,6 +129,7 @@ public class ConfigHandler
 	public static float GazelleRate = 2.4F;
 	public static float SharkRate = 3F;
 	public static float CrabRate = 3F;
+	public static float MoleRate = 3F;
 
 	
 	//Dimension IDs
@@ -213,15 +215,16 @@ public class ConfigHandler
 		GazelleOn = config.getBoolean("Gazelle", "mobs", GazelleOn, "Turn the Gazelle on/off");	
 		SharkOn = config.getBoolean("Shark", "mobs", SharkOn, "Turn the Shark on/off");	
 		CrabOn = config.getBoolean("Crab", "mobs", CrabOn, "Turn the Crab on/off");	
+		MoleOn = config.getBoolean("Mole", "mobs", MoleOn, "Turn the Mole on/off");	
 	
-		IchtyosaurusID = config.getInt("IchtyosaurusID", "dinoid", IchtyosaurusID, 0, Integer.MAX_VALUE, "Ichtyosaurus ID");
-		TriceratopsID = config.getInt("TriceratopsID", "dinoid", TriceratopsID, 0, Integer.MAX_VALUE, "Triceratops ID");
-		BrontosaurusID = config.getInt("BrontosaurusID", "dinoid", BrontosaurusID, 0, Integer.MAX_VALUE, "Brontosaurus ID");
-		RaptorID = config.getInt("RaptorID", "dinoid", RaptorID, 0, Integer.MAX_VALUE, "Raptor ID");
-		TRexID = config.getInt("TRexID", "dinoid", TRexID, 0, Integer.MAX_VALUE, "TRex ID");
-		PterosaurusID = config.getInt("PterosaurusID", "dinoid", PterosaurusID, 0, Integer.MAX_VALUE, "Pterosaurus ID");
-		MammothID = config.getInt("MammothID", "dinoid", MammothID, 0, Integer.MAX_VALUE, "Mammoth ID");
-		SaberToothID = config.getInt("SaberToothID", "dinoid", SaberToothID, 0, Integer.MAX_VALUE, "SaberTooth ID");
+		IchtyosaurusID = config.getInt("IchtyosaurusID", "dinoid", IchtyosaurusID, 0, 256, "Ichtyosaurus ID");
+		TriceratopsID = config.getInt("TriceratopsID", "dinoid", TriceratopsID, 0, 256, "Triceratops ID");
+		BrontosaurusID = config.getInt("BrontosaurusID", "dinoid", BrontosaurusID, 0, 256, "Brontosaurus ID");
+		RaptorID = config.getInt("RaptorID", "dinoid", RaptorID, 0, 256, "Raptor ID");
+		TRexID = config.getInt("TRexID", "dinoid", TRexID, 0, 256, "TRex ID");
+		PterosaurusID = config.getInt("PterosaurusID", "dinoid", PterosaurusID, 0, 256, "Pterosaurus ID");
+		MammothID = config.getInt("MammothID", "dinoid", MammothID, 0, 256, "Mammoth ID");
+		SaberToothID = config.getInt("SaberToothID", "dinoid", SaberToothID, 0, 256, "SaberTooth ID");
 
 		DeerRate = config.getFloat("Deer spawn rate", "spawn", DeerRate, -1, 10, "Set Deer spawn rate");
 		BoarRate = config.getFloat("Boar spawn rate", "spawn", BoarRate, -1, 10, "Set Boar spawn rate");
@@ -272,6 +275,7 @@ public class ConfigHandler
 		GazelleRate = config.getFloat("Gazelle spawn rate", "spawn", GazelleRate, -1, 10, "Set Gazelle spawn rate");
 		SharkRate = config.getFloat("Shark spawn rate", "spawn", SharkRate, -1, 10, "Set Shark spawn rate");
 		CrabRate = config.getFloat("Crab spawn rate", "spawn", CrabRate, -1, 10, "Set Crab spawn rate");
+		MoleRate = config.getFloat("Mole spawn rate", "spawn", MoleRate, -1, 10, "Set Mole spawn rate");
 
 		AntarticaID = config.getInt("AntarticaID", "biome", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
 		ArcticOceanID = config.getInt("ArcticOceanID", "biome", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");
