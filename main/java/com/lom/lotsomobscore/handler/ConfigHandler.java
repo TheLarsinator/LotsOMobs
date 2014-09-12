@@ -78,6 +78,7 @@ public class ConfigHandler
 	public static boolean SharkOn = true;
 	public static boolean CrabOn = true;
 	public static boolean MoleOn = true;
+	public static boolean BisonOn = true;
 	
 	//Spawn Rates
 	public static float DeerRate = 2.0F;
@@ -130,6 +131,7 @@ public class ConfigHandler
 	public static float SharkRate = 3F;
 	public static float CrabRate = 3F;
 	public static float MoleRate = 3F;
+	public static float BisonRate = 3.2F;
 
 	
 	//Dimension IDs
@@ -216,6 +218,7 @@ public class ConfigHandler
 		SharkOn = config.getBoolean("Shark", "mobs", SharkOn, "Turn the Shark on/off");	
 		CrabOn = config.getBoolean("Crab", "mobs", CrabOn, "Turn the Crab on/off");	
 		MoleOn = config.getBoolean("Mole", "mobs", MoleOn, "Turn the Mole on/off");	
+		BisonOn = config.getBoolean("Bison", "mobs", BisonOn, "Turn the Bison on/off");	
 	
 		IchtyosaurusID = config.getInt("IchtyosaurusID", "dinoid", IchtyosaurusID, 0, 256, "Ichtyosaurus ID");
 		TriceratopsID = config.getInt("TriceratopsID", "dinoid", TriceratopsID, 0, 256, "Triceratops ID");
@@ -276,6 +279,7 @@ public class ConfigHandler
 		SharkRate = config.getFloat("Shark spawn rate", "spawn", SharkRate, -1, 10, "Set Shark spawn rate");
 		CrabRate = config.getFloat("Crab spawn rate", "spawn", CrabRate, -1, 10, "Set Crab spawn rate");
 		MoleRate = config.getFloat("Mole spawn rate", "spawn", MoleRate, -1, 10, "Set Mole spawn rate");
+		BisonRate = config.getFloat("Bison spawn rate", "spawn", BisonRate, -1, 10, "Set Bison spawn rate");
 
 		AntarticaID = config.getInt("AntarticaID", "biome", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
 		ArcticOceanID = config.getInt("ArcticOceanID", "biome", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");

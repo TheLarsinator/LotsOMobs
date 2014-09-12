@@ -5,7 +5,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
 import com.lom.lotsomobscore.LotsOMobs;
@@ -21,6 +20,7 @@ import com.lom.lotsomobsitems.ItemMaterials;
 import com.lom.lotsomobsitems.ItemMyAxe;
 import com.lom.lotsomobsitems.ItemMyPickaxe;
 import com.lom.lotsomobsitems.ItemMyShovel;
+import com.lom.lotsomobsitems.ItemTRexSpawner;
 import com.lom.lotsomobsitems.ItemTimeTraveler;
 import com.lom.lotsomobsitems.MyFood;
 
@@ -90,6 +90,8 @@ public class LotsOMobsItems
 		public static Item RawShark;
 		public static Item CookedShark;
 		public static Item CocoMilk;
+		
+		public static Item TRex;
 
 		public static Item HornSword;	
 		public static Item AmberPickaxe;
@@ -193,6 +195,8 @@ public class LotsOMobsItems
 		 Rope = new ItemMaterials().setTextureName(modid + ":Rope").setUnlocalizedName("Rope");
 		 Wheel = new ItemMaterials().setTextureName(modid + ":Wheel").setUnlocalizedName("Wheel");
 		 Salt = new ItemMaterials().setTextureName(modid + ":Salt").setUnlocalizedName("Salt");
+		 
+		 TRex = new ItemTRexSpawner().setTextureName(modid + ":TRex").setUnlocalizedName("TRex");
 		 
 		 Venison = new MyFood(6, 1F, false).setTextureName(modid + ":Venison").setUnlocalizedName("Venison");
 		 RawVenison = new MyFood(2, 1F, false).setTextureName(modid + ":RawVenison").setUnlocalizedName("RawVenison");
@@ -340,7 +344,9 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(RawShark, "RawShark", modid);
 		 GameRegistry.registerItem(CookedShark, "CookedShark", modid);
 		 GameRegistry.registerItem(CocoMilk, "CocoMilk", modid);
-		 
+
+		 GameRegistry.registerItem(TRex, "TRex", modid);
+
 //Fossils and Shit
 		 GameRegistry.registerItem(FossilTri, "FossilTri", modid);
 		 GameRegistry.registerItem(FossilBro, "FossilBro", modid);

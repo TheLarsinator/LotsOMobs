@@ -51,6 +51,9 @@ entity.lom_MuskOx.name=Musk Ox
 entity.lom_Gazelle.name=Gazelle
 entity.lom_HammerShark.name=Hammer Shark
 entity.lom_Shark.name=Shark
+entity.lom_Mole.name=Mole
+entity.lom_Bison.name=Bison
+entity.lom_Crab.name=Crab
 
 //Items
 item.DeerFur.name=Deer Hide
@@ -118,9 +121,9 @@ item.PenguinMeat.name=Penguin Meat
 item.RawMammoth.name=Raw Mammoth Meat
 item.MammothMeat.name=Mammoth Meat
 item.RawCrab.name=Raw Crab
-item.CookedCrab.name=Cooked Crab
-item.RawShark.name=Raw Shark Filét
-item.CookedShark.name=Cooked Shark Filét
+item.CrabMeat.name=Cooked Crab
+item.RawShark.name=Raw Shark Filet
+item.SharkMeat.name=Cooked Shark Filet
 item.CocoMilk.name=Coconut Milk
 
 item.HornSword.name=Horn Sword

@@ -14,6 +14,7 @@ import com.lom.lotsomobsentity.EntityAnt;
 import com.lom.lotsomobsentity.EntityBear;
 import com.lom.lotsomobsentity.EntityBee;
 import com.lom.lotsomobsentity.EntityBird;
+import com.lom.lotsomobsentity.EntityBison;
 import com.lom.lotsomobsentity.EntityBoar;
 import com.lom.lotsomobsentity.EntityBrontosaurus;
 import com.lom.lotsomobsentity.EntityBullFrog;
@@ -395,11 +396,15 @@ public class LotsOMobsMobs
 				}
 				if(ConfigHandler.MoleOn == true)
 				{	
-					EntityRegistry.registerGlobalEntityID(EntityMole.class, mobid + "Mole", EntityRegistry.findGlobalUniqueEntityId(), 0x7D3B0C, 0x351f0a);
-					EntityRegistry.registerGlobalEntityID(EntityDirtPile.class, mobid + "DirtPile", EntityRegistry.findGlobalUniqueEntityId(),0x7D3B0C, 0x351f0a);
+					EntityRegistry.registerGlobalEntityID(EntityMole.class, mobid + "Mole", EntityRegistry.findGlobalUniqueEntityId(), 0x7D3B0C, 0x544842);
+					EntityRegistry.registerGlobalEntityID(EntityDirtPile.class, mobid + "DirtPile", EntityRegistry.findGlobalUniqueEntityId());
 					EntityRegistry.addSpawn(EntityMole.class, (int)ConfigHandler.MoleRate *10, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills,BiomeGenBase.plains});
 					EntityRegistry.addSpawn(EntityMole.class, (int)ConfigHandler.MoleRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.PLAINS));
-
+				}
+				if(ConfigHandler.BisonOn == true)
+				{  
+			    	EntityRegistry.registerGlobalEntityID(EntityBison.class, mobid + "Bison", EntityRegistry.findGlobalUniqueEntityId(), 0xc8953b, 0x5f360d);
+			     	EntityRegistry.addSpawn(EntityBison.class, (int) ConfigHandler.BisonRate, 6, 9, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.savanna, BiomeGenBase.savannaPlateau});
 				}
 	}
 
