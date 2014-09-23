@@ -170,14 +170,16 @@ public class LotsOMobsRecipes
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilMam });
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilIch });
 
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.TriceratopsID), new Object[]{ Items.egg, DNATri });
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.BrontosaurusID), new Object[]{ Items.egg, DNABro });
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.RaptorID), new Object[]{ Items.egg, DNARap });
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.TRexID), new Object[]{ Items.egg, DNARex });
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.PterosaurusID), new Object[]{ Items.egg, DNAPte});
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.IchtyosaurusID), new Object[]{ Items.egg, DNAIch });
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.MammothID), new Object[]{ Items.egg, DNAMam });
-		 GameRegistry.addShapelessRecipe(new ItemStack(Items.spawn_egg, 1, ConfigHandler.SaberToothID), new Object[]{ Items.egg, DNASab });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Triceratops, 1), new Object[]{ Items.egg, DNATri });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Brontosaurus, 1), new Object[]{ Items.egg, DNABro });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Raptor, 1), new Object[]{ Items.egg, DNARap });
+		 GameRegistry.addShapelessRecipe(new ItemStack(TRex, 1), new Object[]{ Items.egg, DNARex });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Pterosaurus, 1), new Object[]{ Items.egg, DNAPte});
+		 GameRegistry.addShapelessRecipe(new ItemStack(Ichtyosaurus, 1), new Object[]{ Items.egg, DNAIch });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Mammoth, 1), new Object[]{ Items.egg, DNAMam });
+		 GameRegistry.addShapelessRecipe(new ItemStack(SaberTooth, 1), new Object[]{ Items.egg, DNASab });
+		 GameRegistry.addShapelessRecipe(new ItemStack(MuskOx, 1), new Object[]{ Items.egg, DNAMsk });
+		 GameRegistry.addShapelessRecipe(new ItemStack(Ammonite, 1), new Object[]{ Items.egg, DNAAmt });
 		 
 		 GameRegistry.addRecipe(new ItemStack(LotsOMobsBlocks.DNAExtractor, 1), new Object [] {"###", "XGA", "#C#", Character.valueOf('X'), IcemintuimBar,Character.valueOf('A'), Amber, Character.valueOf('G'), Blocks.glass, Character.valueOf('#'), Items.iron_ingot, Character.valueOf('C'), Items.cauldron});
 		 GameRegistry.addRecipe(new ItemStack(LotsOMobsBlocks.DNAExtractor, 1), new Object [] {"###", "AGX", "#C#", Character.valueOf('X'), IcemintuimBar,Character.valueOf('A'), Amber, Character.valueOf('G'), Blocks.glass, Character.valueOf('#'), Items.iron_ingot, Character.valueOf('C'), Items.cauldron});

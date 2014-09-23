@@ -54,6 +54,7 @@ entity.lom_Shark.name=Shark
 entity.lom_Mole.name=Mole
 entity.lom_Bison.name=Bison
 entity.lom_Crab.name=Crab
+entity.lom_Ammonite.name=Ammonite
 
 //Items
 item.DeerFur.name=Deer Hide
@@ -82,6 +83,8 @@ item.FossilPte.name=Pterosaurus Fossil
 item.FossilIch.name=Ichtyosaurus Fossil
 item.FossilSab.name=Sabertooth Fossil
 item.FossilMam.name=Mammoth Fossil
+item.FossilMsk.name=Musk Ox Fossil
+item.FossilAmt.name=Ammonite Fossil
 item.DNATri.name=Triceratops DNA
 item.DNABro.name=Brontosaurus DNA
 item.DNARap.name=Raptor DNA
@@ -90,12 +93,27 @@ item.DNARex.name=T-Rex DNA
 item.DNAPte.name=Pterosaurus DNA
 item.DNAIch.name=Ichtyosaurus DNA
 item.DNASab.name=Sabertooth DNA
+item.DNAMsk.name=Musk Ox DNA
+item.DNAAmt.name=Ammonite DNA
 item.DNASolvent.name=DNA Solvent
 item.EasterCake.name=Easter Cake
 item.IcemintuimBar.name=Icemintuim Bar
 item.ElephantHideSalted.name=Elephant Hide (Salted)
 item.ElephantHideDirty.name=Elephant Hide (Dirty)
 item.Knife.name=Knife
+
+item.TRex.name=TRex Egg
+item.Triceratops.name=Triceratops Egg
+item.Brontosaurus.name=Brontosaurus Egg
+item.Pterosaur.name=Pterosaur Egg
+item.Raptor.name=Raptor Egg
+item.Ichtyosaurus.name=Ichtyosaurus Egg
+item.Mammoth.name=Mammoth Egg
+item.SaberTooth.name=SaberTooth Egg
+item.MuskOx.name=Musk Ox Egg
+item.Ammonite.name=Ammonite Egg
+
+
 
 item.RawVenison.name=Raw Venison
 item.Venison.name=Venison

@@ -20,7 +20,7 @@ import com.lom.lotsomobsitems.ItemMaterials;
 import com.lom.lotsomobsitems.ItemMyAxe;
 import com.lom.lotsomobsitems.ItemMyPickaxe;
 import com.lom.lotsomobsitems.ItemMyShovel;
-import com.lom.lotsomobsitems.ItemTRexSpawner;
+import com.lom.lotsomobsitems.ItemAncientSpawner;
 import com.lom.lotsomobsitems.ItemTimeTraveler;
 import com.lom.lotsomobsitems.MyFood;
 
@@ -92,6 +92,15 @@ public class LotsOMobsItems
 		public static Item CocoMilk;
 		
 		public static Item TRex;
+		public static Item Triceratops;
+		public static Item Brontosaurus;
+		public static Item Pterosaurus;
+		public static Item Raptor;
+		public static Item Ichtyosaurus;
+		public static Item Mammoth;
+		public static Item SaberTooth;
+		public static Item MuskOx;
+		public static Item Ammonite;
 
 		public static Item HornSword;	
 		public static Item AmberPickaxe;
@@ -155,6 +164,8 @@ public class LotsOMobsItems
 		public static Item FossilMam;
 		public static Item FossilSab;
 		public static Item FossilIch;
+		public static Item FossilMsk;
+		public static Item FossilAmt;
 		public static Item DNATri;
 		public static Item DNABro;
 		public static Item DNARap;
@@ -163,6 +174,8 @@ public class LotsOMobsItems
 		public static Item DNAMam;
 		public static Item DNASab;
 		public static Item DNAIch;
+		public static Item DNAMsk;
+		public static Item DNAAmt;
 
 		public static Item DNASolvent;
 
@@ -196,7 +209,16 @@ public class LotsOMobsItems
 		 Wheel = new ItemMaterials().setTextureName(modid + ":Wheel").setUnlocalizedName("Wheel");
 		 Salt = new ItemMaterials().setTextureName(modid + ":Salt").setUnlocalizedName("Salt");
 		 
-		 TRex = new ItemTRexSpawner().setTextureName(modid + ":TRex").setUnlocalizedName("TRex");
+		 TRex = new ItemAncientSpawner(1).setTextureName(modid + ":TRex").setUnlocalizedName("TRex");
+		 Triceratops = new ItemAncientSpawner(2).setTextureName(modid + ":Triceratops").setUnlocalizedName("Triceratops");
+		 Brontosaurus = new ItemAncientSpawner(3).setTextureName(modid + ":Brontosaurus").setUnlocalizedName("Brontosaurus");
+		 Pterosaurus = new ItemAncientSpawner(4).setTextureName(modid + ":Pterosaurus").setUnlocalizedName("Pterosaurus");
+		 Raptor = new ItemAncientSpawner(5).setTextureName(modid + ":Raptor").setUnlocalizedName("Raptor");
+		 Ichtyosaurus = new ItemAncientSpawner(6).setTextureName(modid + ":Ichtyosaurus").setUnlocalizedName("Ichtyosaurus");
+		 Mammoth = new ItemAncientSpawner(7).setTextureName(modid + ":Mammoth").setUnlocalizedName("Mammoth");
+		 SaberTooth = new ItemAncientSpawner(8).setTextureName(modid + ":SaberTooth").setUnlocalizedName("SaberTooth");
+		 MuskOx = new ItemAncientSpawner(9).setTextureName(modid + ":MuskOx").setUnlocalizedName("MuskOx");
+		 Ammonite = new ItemAncientSpawner(10).setTextureName(modid + ":Ammonite").setUnlocalizedName("Ammonite");
 		 
 		 Venison = new MyFood(6, 1F, false).setTextureName(modid + ":Venison").setUnlocalizedName("Venison");
 		 RawVenison = new MyFood(2, 1F, false).setTextureName(modid + ":RawVenison").setUnlocalizedName("RawVenison");
@@ -241,6 +263,8 @@ public class LotsOMobsItems
 		 FossilMam = new ItemDNA().setUnlocalizedName("FossilMam").setTextureName(modid + ":Fossil");
 		 FossilSab = new ItemDNA().setUnlocalizedName("FossilSab").setTextureName(modid + ":Fossil");
 		 FossilIch = new ItemDNA().setUnlocalizedName("FossilIch").setTextureName(modid + ":Fossil");
+		 FossilMsk = new ItemDNA().setUnlocalizedName("FossilMsk").setTextureName(modid + ":Fossil");
+		 FossilAmt = new ItemDNA().setUnlocalizedName("FossilAmt").setTextureName(modid + ":Fossil");
 		 DNATri = new ItemDNA().setUnlocalizedName("DNATri").setTextureName(modid + ":DNATri");
 		 DNABro = new ItemDNA().setUnlocalizedName("DNABro").setTextureName(modid + ":DNABro");
 		 DNARap = new ItemDNA().setUnlocalizedName("DNARap").setTextureName(modid + ":DNARap");
@@ -249,6 +273,8 @@ public class LotsOMobsItems
 		 DNAMam = new ItemDNA().setUnlocalizedName("DNAMam").setTextureName(modid + ":DNAMam");
 		 DNASab = new ItemDNA().setUnlocalizedName("DNASab").setTextureName(modid + ":DNASab");
 		 DNAIch = new ItemDNA().setUnlocalizedName("DNAIch").setTextureName(modid + ":DNAIch");
+		 DNAMsk = new ItemDNA().setUnlocalizedName("DNAMsk").setTextureName(modid + ":DNAMsk");
+		 DNAAmt = new ItemDNA().setUnlocalizedName("DNAAmt").setTextureName(modid + ":DNAAmt");
 
 		 DNASolvent = new ItemDNA().setUnlocalizedName("DNASolvent").setTextureName(modid + ":DNASolvent");
 
@@ -346,6 +372,15 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(CocoMilk, "CocoMilk", modid);
 
 		 GameRegistry.registerItem(TRex, "TRex", modid);
+		 GameRegistry.registerItem(Triceratops, "Triceratops", modid);
+		 GameRegistry.registerItem(Brontosaurus, "Brontosaurus", modid);
+		 GameRegistry.registerItem(Pterosaurus, "Pterosaurus", modid);
+		 GameRegistry.registerItem(Raptor, "Raptor", modid);
+		 GameRegistry.registerItem(Ichtyosaurus, "Ichtyosaurus", modid);
+		 GameRegistry.registerItem(Mammoth, "Mammoth", modid);
+		 GameRegistry.registerItem(SaberTooth, "SaberTooth", modid);
+		 GameRegistry.registerItem(MuskOx, "MuskOx", modid);
+		 GameRegistry.registerItem(Ammonite, "Ammonite", modid);
 
 //Fossils and Shit
 		 GameRegistry.registerItem(FossilTri, "FossilTri", modid);
@@ -356,6 +391,8 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(FossilSab, "FossilSab", modid);
 		 GameRegistry.registerItem(FossilPte, "FossilPte", modid);
 		 GameRegistry.registerItem(FossilIch, "FossilIch", modid);
+		 GameRegistry.registerItem(FossilMsk, "FossilMsk", modid);
+		 GameRegistry.registerItem(FossilAmt, "FossilAmt", modid);
 		 GameRegistry.registerItem(DNATri, "DNATri", modid);
 		 GameRegistry.registerItem(DNABro, "DNABro", modid);
 		 GameRegistry.registerItem(DNARap, "DNARap", modid);
@@ -364,9 +401,10 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(DNAMam, "DNAMam", modid);
 		 GameRegistry.registerItem(DNASab, "DNASab", modid);
 		 GameRegistry.registerItem(DNAIch, "DNAIch", modid);
+		 GameRegistry.registerItem(DNAMsk, "DNAMsk", modid);
+		 GameRegistry.registerItem(DNAAmt, "DNAAmt", modid);
 		 GameRegistry.registerItem(DNASolvent, "DNASolvent", modid);
-		 
-		 
+		  
 		 GameRegistry.registerItem(RawVenison, "Raw_Venison", modid);
 		 GameRegistry.registerItem(Venison, "Venison", modid);
 		 GameRegistry.registerItem(RawBoar, "Raw_Boar", modid);

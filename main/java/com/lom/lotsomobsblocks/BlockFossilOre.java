@@ -30,7 +30,7 @@ public int quantityDropped(int par1)
 
 public Item getItemDropped(int par1, Random par2Random, int par3)
 {
-    int var3 = this.rand.nextInt(5);
+    int var3 = this.rand.nextInt(9);
     if (var3 == 0)
     {
     return LotsOMobsItems.FossilTri;
@@ -51,9 +51,25 @@ public Item getItemDropped(int par1, Random par2Random, int par3)
     {
     return LotsOMobsItems.FossilPte;
     }
-    else
+    else if(var3 == 5)
     {
     return LotsOMobsItems.FossilIch;
+    }
+    else if(var3 == 6)
+    {
+    return LotsOMobsItems.FossilAmt;
+    }
+    else if(var3 == 7)
+    {
+    return LotsOMobsItems.FossilSab;
+    }
+    else if(var3 == 8)
+    {
+    return LotsOMobsItems.FossilMam;
+    }
+    else
+    {
+    return LotsOMobsItems.FossilMsk;
     }
 
 }

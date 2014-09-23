@@ -38,6 +38,8 @@ public class RecipesDNAExtractor
     addSmelting(new ItemStack(LotsOMobsItems.FossilMam, 1, 0), new ItemStack(LotsOMobsItems.DNAMam, 1, 0), 0.7F);
     addSmelting(new ItemStack(LotsOMobsItems.FossilSab, 1, 0), new ItemStack(LotsOMobsItems.DNASab, 1, 0), 0.7F);
     addSmelting(new ItemStack(LotsOMobsItems.FossilIch, 1, 0), new ItemStack(LotsOMobsItems.DNAIch, 1, 0), 0.7F);
+    addSmelting(new ItemStack(LotsOMobsItems.FossilMsk, 1, 0), new ItemStack(LotsOMobsItems.DNAMsk, 1, 0), 0.7F);
+    addSmelting(new ItemStack(LotsOMobsItems.FossilAmt, 1, 0), new ItemStack(LotsOMobsItems.DNAAmt, 1, 0), 0.7F);
     }
 
     public void func_151393_a(Block p_151393_1_, ItemStack p_151393_2_, float p_151393_3_)

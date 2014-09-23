@@ -5,6 +5,7 @@ import net.minecraft.client.model.ModelChicken;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
+import com.lom.lotsomobsentity.EntityAmmonite;
 import com.lom.lotsomobsentity.EntityAnt;
 import com.lom.lotsomobsentity.EntityBear;
 import com.lom.lotsomobsentity.EntityBee;
@@ -62,6 +63,7 @@ import com.lom.lotsomobsentity.EntityWhale;
 import com.lom.lotsomobsentity.EntityWinterDeer;
 import com.lom.lotsomobsentity.EntityWorm;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
+import com.lom.lotsomobsmodels.ModelAmmonite;
 import com.lom.lotsomobsmodels.ModelAnt;
 import com.lom.lotsomobsmodels.ModelBear;
 import com.lom.lotsomobsmodels.ModelBird;
@@ -111,6 +113,7 @@ import com.lom.lotsomobsmodels.ModelTurtle;
 import com.lom.lotsomobsmodels.ModelVulture;
 import com.lom.lotsomobsmodels.ModelWhale;
 import com.lom.lotsomobsmodels.ModelWorm;
+import com.lom.lotsomobsrender.RenderAmmonite;
 import com.lom.lotsomobsrender.RenderAnt;
 import com.lom.lotsomobsrender.RenderBear;
 import com.lom.lotsomobsrender.RenderBee;
@@ -253,6 +256,7 @@ public class LotsOMobsClient extends LotsOMobsProxy
   		RenderingRegistry.registerEntityRenderingHandler(EntityMole.class, new RenderMole(new ModelMole(), 0.2F));
   		RenderingRegistry.registerEntityRenderingHandler(EntityDirtPile.class, new RenderDirtPile(new ModelDirtPile(), 0.2F));
   		RenderingRegistry.registerEntityRenderingHandler(EntityBison.class, new RenderBison(new ModelBison(), 1F));
+  		RenderingRegistry.registerEntityRenderingHandler(EntityAmmonite.class, new RenderAmmonite(new ModelAmmonite(), 1F));
  
   		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTanningRack.class, new TileEntityRendererTanningRack());
   		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(LotsOMobsBlocks.TanningRack), (new ItemRenderTanningRack()));

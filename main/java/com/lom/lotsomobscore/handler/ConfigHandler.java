@@ -12,15 +12,6 @@ public class ConfigHandler
 	
 	public static Configuration config;
 	
-	public static int TriceratopsID = 110;
-	public static int BrontosaurusID = 111;
-	public static int RaptorID = 112;
-	public static int TRexID = 113;
-	public static int PterosaurusID = 114;
-	public static int MammothID = 115;
-	public static int SaberToothID = 116;
-	public static int IchtyosaurusID = 117;
-	
 	//All Mobs On/Off
 	public static boolean DeerOn = true;
 	public static boolean BoarOn = true;
@@ -79,6 +70,8 @@ public class ConfigHandler
 	public static boolean CrabOn = true;
 	public static boolean MoleOn = true;
 	public static boolean BisonOn = true;
+	public static boolean AmmoniteOn = true;
+
 	
 	//Spawn Rates
 	public static float DeerRate = 2.0F;
@@ -132,6 +125,7 @@ public class ConfigHandler
 	public static float CrabRate = 3F;
 	public static float MoleRate = 3F;
 	public static float BisonRate = 3.2F;
+	public static float AmmoniteRate = 8F;
 
 	
 	//Dimension IDs
@@ -144,6 +138,8 @@ public class ConfigHandler
 	public static int DinoTerrainID = 42;
 	public static int IceAgeTerrainID = 46;
 	public static int TropicBeachID = 55;
+
+
 
 
 
@@ -219,15 +215,7 @@ public class ConfigHandler
 		CrabOn = config.getBoolean("Crab", "mobs", CrabOn, "Turn the Crab on/off");	
 		MoleOn = config.getBoolean("Mole", "mobs", MoleOn, "Turn the Mole on/off");	
 		BisonOn = config.getBoolean("Bison", "mobs", BisonOn, "Turn the Bison on/off");	
-	
-		IchtyosaurusID = config.getInt("IchtyosaurusID", "dinoid", IchtyosaurusID, 0, 256, "Ichtyosaurus ID");
-		TriceratopsID = config.getInt("TriceratopsID", "dinoid", TriceratopsID, 0, 256, "Triceratops ID");
-		BrontosaurusID = config.getInt("BrontosaurusID", "dinoid", BrontosaurusID, 0, 256, "Brontosaurus ID");
-		RaptorID = config.getInt("RaptorID", "dinoid", RaptorID, 0, 256, "Raptor ID");
-		TRexID = config.getInt("TRexID", "dinoid", TRexID, 0, 256, "TRex ID");
-		PterosaurusID = config.getInt("PterosaurusID", "dinoid", PterosaurusID, 0, 256, "Pterosaurus ID");
-		MammothID = config.getInt("MammothID", "dinoid", MammothID, 0, 256, "Mammoth ID");
-		SaberToothID = config.getInt("SaberToothID", "dinoid", SaberToothID, 0, 256, "SaberTooth ID");
+		AmmoniteOn = config.getBoolean("Ammonite", "mobs", AmmoniteOn, "Turn the Ammonite on/off");	
 
 		DeerRate = config.getFloat("Deer spawn rate", "spawn", DeerRate, -1, 10, "Set Deer spawn rate");
 		BoarRate = config.getFloat("Boar spawn rate", "spawn", BoarRate, -1, 10, "Set Boar spawn rate");
@@ -280,6 +268,7 @@ public class ConfigHandler
 		CrabRate = config.getFloat("Crab spawn rate", "spawn", CrabRate, -1, 10, "Set Crab spawn rate");
 		MoleRate = config.getFloat("Mole spawn rate", "spawn", MoleRate, -1, 10, "Set Mole spawn rate");
 		BisonRate = config.getFloat("Bison spawn rate", "spawn", BisonRate, -1, 10, "Set Bison spawn rate");
+		AmmoniteRate = config.getFloat("Ammonite spawn rate", "spawn", AmmoniteRate, -1, 10, "Set Ammonite spawn rate");
 
 		AntarticaID = config.getInt("AntarticaID", "biome", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
 		ArcticOceanID = config.getInt("ArcticOceanID", "biome", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");
