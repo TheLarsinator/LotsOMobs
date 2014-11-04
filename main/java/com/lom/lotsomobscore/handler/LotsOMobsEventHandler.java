@@ -1,4 +1,4 @@
-package com.lom.lotsomobsachievement;
+package com.lom.lotsomobscore.handler;
 
 import scala.util.Random;
 import net.minecraft.block.BlockCarrot;
@@ -9,7 +9,6 @@ import net.minecraft.block.BlockPumpkin;
 import net.minecraftforge.event.world.BlockEvent;
 
 import com.lom.lotsomobsblocks.BlockCoral;
-import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsentity.EntityMole;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
@@ -19,7 +18,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 
 
-public class LotsOMobsAchievements
+public class LotsOMobsEventHandler
 {
 	@SubscribeEvent
 	public void OnItemPickUp(PlayerEvent.ItemPickupEvent event)
@@ -79,6 +78,8 @@ public class LotsOMobsAchievements
 	{
 		event.player.addStat(LotsOMobsAchievementsBook.AchievementLogIn, 1);
 		
+		
+		
 	}
 	
 	@SubscribeEvent
@@ -133,8 +134,6 @@ public class LotsOMobsAchievements
 	@SubscribeEvent
 	public void OnCrafted(PlayerEvent.ItemCraftedEvent event)
 	{
-		System.out.println("DebugMSG");
-
 		if(event.crafting.getItem() == LotsOMobsItems.IcemintuimSword || event.crafting.getItem() == LotsOMobsItems.IcemintuimShovel || event.crafting.getItem() == LotsOMobsItems.IcemintuimAxe || event.crafting.getItem() == LotsOMobsItems.IcemintuimPickaxe || event.crafting.getItem() == LotsOMobsItems.IcemintuimHoe)
 		{
 			event.player.addStat(LotsOMobsAchievementsBook.AchievementIceTool, 1);

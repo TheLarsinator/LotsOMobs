@@ -21,12 +21,7 @@ public class TileEntitySaltBath extends TileEntity
     public void writeToNBT(NBTTagCompound nbttag)
     {
         String s = (String)classToNameMap.get(this.getClass());
- 
-        if (s == null)
-        {
-            throw new RuntimeException(this.getClass() + " is missing a mapping! This is a bug!");
-        }
-        else
+
         {
                 nbttag.setString("id", s);
         }

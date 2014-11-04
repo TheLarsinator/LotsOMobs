@@ -8,9 +8,9 @@ import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 
-import com.lom.lotsomobsachievement.LotsOMobsAchievements;
 import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobscore.handler.GuiHandler;
+import com.lom.lotsomobscore.handler.LotsOMobsEventHandler;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBiomes;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
@@ -33,7 +33,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-203.0.3", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.0.0", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais
@@ -102,7 +102,7 @@ public class LotsOMobs
      	ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 50));
      	ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 50));     	
 
-     	MinecraftForge.EVENT_BUS.register(new LotsOMobsAchievements());
-     	FMLCommonHandler.instance().bus().register(new LotsOMobsAchievements());
+     	MinecraftForge.EVENT_BUS.register(new LotsOMobsEventHandler());
+     	FMLCommonHandler.instance().bus().register(new LotsOMobsEventHandler());
 	}
 }
