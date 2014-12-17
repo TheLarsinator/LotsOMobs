@@ -37,7 +37,7 @@ public class EntitySaberTooth extends EntityAgeableMob
     public EntitySaberTooth(World par1World)
     {
         super(par1World);
-        this.moveSpeed = 0.7F;
+        this.moveSpeed = 0.2F;
         this.setSize(2F, 2F);
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed + 0.2F, false));
         this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityTriceratops.class, this.moveSpeed, true));

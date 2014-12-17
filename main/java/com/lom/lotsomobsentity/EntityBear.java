@@ -37,7 +37,7 @@ public class EntityBear extends EntityAgeableMob
     public EntityBear(World par1World)
     {
         super(par1World);
-        this.moveSpeed = 1.2F;
+        this.moveSpeed = .2F;
         this.setSize(1.2F, 1.3F);
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed + 0.2F, false));
         this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityDeer.class, this.moveSpeed, true));
