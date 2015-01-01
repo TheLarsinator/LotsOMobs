@@ -49,10 +49,10 @@ public class LotsOMobsBiomes
 		 modBiomeDinoOcean = new BiomeGenDinoOcean(ConfigHandler.DinoTerrainID+2).setColor(6546587).setBiomeName("Dino Ocean");
 		 modBiomeDinoIslands = new BiomeGenDinoIslands(ConfigHandler.DinoTerrainID+3).setColor(6546587).setBiomeName("Dino Islands");
 		 modBiomeDinoJungle = new BiomeGenDinoJungle(ConfigHandler.DinoTerrainID+4).setColor(6546587).setBiomeName("Dino Jungle");	
-		 modBiomeIcePlains = new BiomeGenIcePlains(ConfigHandler.IceAgeTerrainID+1).setColor(6546587).setBiomeName("Ice Plains");
-		 modBiomeIceMountains = new BiomeGenIceMountains(ConfigHandler.IceAgeTerrainID+2).setColor(6546587).setBiomeName("Ice Mountains");
-		 modBiomeIceOcean = new BiomeGenIceOcean(ConfigHandler.IceAgeTerrainID+3).setColor(6546587).setBiomeName("Ice Ocean");
-		 modBiomeIceIslands = new BiomeGenIceIslands(ConfigHandler.IceAgeTerrainID+4).setColor(6546587).setBiomeName("Ice Islands");
+		 modBiomeIcePlains = new BiomeGenIcePlains(ConfigHandler.IceAgeTerrainID).setColor(6546587).setBiomeName("Ice Plains");
+		 modBiomeIceMountains = new BiomeGenIceMountains(ConfigHandler.IceAgeTerrainID+1).setColor(6546587).setBiomeName("Ice Mountains");
+		 modBiomeIceOcean = new BiomeGenIceOcean(ConfigHandler.IceAgeTerrainID+2).setColor(6546587).setBiomeName("Ice Ocean");
+		 modBiomeIceIslands = new BiomeGenIceIslands(ConfigHandler.IceAgeTerrainID+3).setColor(6546587).setBiomeName("Ice Islands");
 		 modBiomeTropical = new BiomeGenTropical(ConfigHandler.TropicBeachID).setColor(747097).setBiomeName("Tropical Beach");
 
 		 BiomeManager.icyBiomes.add(new BiomeEntry(modBiomeAntartica, 50));
