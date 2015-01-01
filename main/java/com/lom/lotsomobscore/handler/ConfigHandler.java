@@ -136,7 +136,7 @@ public class ConfigHandler
 	public static int ArcticOceanID = 40;
 	public static int AntarticaID = 41;
 	public static int DinoTerrainID = 42;
-	public static int IceAgeTerrainID = 46;
+	public static int IceAgeTerrainID = 47;
 	public static int TropicBeachID = 55;
 
 
@@ -272,9 +272,10 @@ public class ConfigHandler
 
 		AntarticaID = config.getInt("AntarticaID", "biome", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
 		ArcticOceanID = config.getInt("ArcticOceanID", "biome", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");
-		DinoTerrainID = config.getInt("DinoTerrainID", "biome", DinoTerrainID, 0, Integer.MAX_VALUE, "DinoTerrain ID, remember to keep the next 3 IDs "
-				+ "empty as well since LotsOMobs adds 4 Dino Biomes");
+		DinoTerrainID = config.getInt("DinoTerrainID", "biome", DinoTerrainID, 0, Integer.MAX_VALUE, "DinoTerrain ID, remember to keep the next 4 IDs "
+				+ "empty as well since LotsOMobs adds 5 Dino Biomes");
 		IceAgeTerrainID = config.getInt("IceAgeTerrainID", "biome", IceAgeTerrainID, 0, Integer.MAX_VALUE, "IceAgeTerrain ID, also keep 3 IDs empty after this one");
+		TropicBeachID = config.getInt("TropicBeachID", "biome", TropicBeachID, 0, Integer.MAX_VALUE, "TropicBeach ID");
 
 		dimension = config.getInt("Dino Dimension ID", "dimension", dimension, -100, Integer.MAX_VALUE, "Dino ID");
 		dimension2 = config.getInt("Ice Dimension ID", "dimension", dimension2, -100, Integer.MAX_VALUE, "Ice Age ID");

@@ -120,9 +120,7 @@ public class LotsOMobsEventHandler
 		}
 		if(event.block instanceof BlockCrops)
 		{
-			Random rand = new Random();
-			
-			if(rand.nextInt(10)==1)
+			if(ConfigHandler.MoleOn && event.world.rand.nextInt(10)==1)
 			{
         	EntityMole entityMole = new EntityMole(event.world);
         	entityMole.setLocationAndAngles(event.x, event.y, event.z, 0, 0);
