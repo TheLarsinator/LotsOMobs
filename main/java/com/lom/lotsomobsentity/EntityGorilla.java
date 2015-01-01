@@ -44,12 +44,12 @@ public class EntityGorilla extends EntityAgeableMob
        // this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityEmpirosaurus.class, this.moveSpeed, true));
         this.tasks.addTask(4, new EntityAIMoveTowardsRestriction(this, this.moveSpeed));
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
-        this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
-        this.tasks.addTask(3, new EntityAITempt(this, 1.25D, Items.wheat, false));
-        this.tasks.addTask(4, new EntityAIFollowParent(this, 1.25D));
-        this.tasks.addTask(0, new EntityAIWander(this, 1.0D));
-        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
+        this.tasks.addTask(1, new EntityAIPanic(this, moveSpeed));
+        this.tasks.addTask(2, new EntityAIMate(this, moveSpeed));
+        this.tasks.addTask(3, new EntityAITempt(this, moveSpeed, Items.wheat, false));
+        this.tasks.addTask(4, new EntityAIFollowParent(this, moveSpeed));
+        this.tasks.addTask(0, new EntityAIWander(this, moveSpeed));
+        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, moveSpeed));
         this.tasks.addTask(7, new EntityAILookIdle(this));
         //this.tasks.addTask(3, new EntityAITempt(this, 0.25F, Item.wheat.itemID, false));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));

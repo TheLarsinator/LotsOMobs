@@ -277,7 +277,7 @@ public class LotsOMobsMobs
 				if(ConfigHandler.SantaOn == true)
 				{		//* Christmas Special*//
 			        EntityRegistry.registerGlobalEntityID(EntitySanta.class, mobid + "Santa", EntityRegistry.findGlobalUniqueEntityId(), 0xE82525, 0xFFFFFF);
-			        EntityRegistry.addSpawn(EntitySanta.class, (int)ConfigHandler.SantaRate *10, 1, 1, EnumCreatureType.creature, new BiomeGenBase[] {
+			        EntityRegistry.addSpawn(EntitySanta.class, (int)ConfigHandler.SantaRate *20, 1, 1, EnumCreatureType.creature, new BiomeGenBase[] {
 			            	 BiomeGenBase.beach,
 			            	 BiomeGenBase.forest,
 			            	 BiomeGenBase.forestHills,
