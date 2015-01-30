@@ -186,7 +186,7 @@ public class EntityTriceratops extends EntityTameable
      */
     protected String getLivingSound()
     {
-        return this.isAngry() ? "mob.wolf.growl" : (this.rand.nextInt(3) == 0 ? (this.isTamed() && this.dataWatcher.getWatchableObjectFloat(18) < 10.0F ? "mob.wolf.whine" : "mob.wolf.panting") : "mob.wolf.bark");
+        return this.isAngry() ? "lom:triceratops" : (this.rand.nextInt(3) == 0 ? (this.isTamed() && this.dataWatcher.getWatchableObjectFloat(18) < 10.0F ? "mob.wolf.whine" : "mob.wolf.panting") : "mob.wolf.bark");
     }
 
     /**
@@ -194,7 +194,7 @@ public class EntityTriceratops extends EntityTameable
      */
     protected String getHurtSound()
     {
-        return "mob.wolf.hurt";
+        return "lom:triceratops";
     }
 
     /**
@@ -202,7 +202,7 @@ public class EntityTriceratops extends EntityTameable
      */
     protected String getDeathSound()
     {
-        return "mob.wolf.death";
+        return "lom:triceratops";
     }
 
     /**
