@@ -24,7 +24,7 @@ public class EntityButterfly extends EntityFlying implements IMob
     {
         super(par1World);
         textureID = rand.nextInt(4);
-        this.setSize(1.0F, 1.0F);
+        this.setSize(0.5F, 0.5F);
         this.isImmuneToFire = false;
         this.experienceValue = 5;
     }

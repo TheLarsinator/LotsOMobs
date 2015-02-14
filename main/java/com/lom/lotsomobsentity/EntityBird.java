@@ -21,7 +21,7 @@ public class EntityBird extends EntityFlying implements IMob
     public EntityBird(World par1World)
     {
         super(par1World);
-        this.setSize(1.0F, 1.0F);
+        this.setSize(0.5F, 0.5F);
         this.isImmuneToFire = false;
         this.experienceValue = 5;
     }

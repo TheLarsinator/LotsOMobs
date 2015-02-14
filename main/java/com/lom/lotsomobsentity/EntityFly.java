@@ -24,7 +24,7 @@ public class EntityFly extends EntityAnimal
     {
         super(par1World);
 
-        this.setSize(1F, 1F);
+        this.setSize(0.5F, 0.5F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIPanic(this, 0.38F));

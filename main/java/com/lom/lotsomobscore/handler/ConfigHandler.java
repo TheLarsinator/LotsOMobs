@@ -138,11 +138,6 @@ public class ConfigHandler
 	public static int DinoTerrainID = 42;
 	public static int IceAgeTerrainID = 47;
 	public static int TropicBeachID = 55;
-
-
-
-
-
 	
 	public static void LoadFile(File configFile)
 	{

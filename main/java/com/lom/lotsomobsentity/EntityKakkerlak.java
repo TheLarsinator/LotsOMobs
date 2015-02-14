@@ -58,7 +58,7 @@ public class EntityKakkerlak extends EntityTameable
     public EntityKakkerlak(World par1World)
     {
         super(par1World);
-        this.setSize(0.6F, 0.8F);
+        this.setSize(0.5F, 0.5F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(1, new EntityAISwimming(this));
         this.tasks.addTask(2, this.aiSit);

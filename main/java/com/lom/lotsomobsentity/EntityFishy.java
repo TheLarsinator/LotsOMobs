@@ -16,7 +16,7 @@ public class EntityFishy extends EntityFriendlyWater {
    public int textureID;
    public EntityFishy(World var1) {
       super(var1);
-      this.setSize(.7F, .7F);
+      this.setSize(0.5F, 0.5F);
       this.textureID = rand.nextInt(3);
    }
 

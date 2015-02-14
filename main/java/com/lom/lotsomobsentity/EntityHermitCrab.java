@@ -30,6 +30,8 @@ public class EntityHermitCrab extends EntityMobBase
     {
         super(par1World);
         this.isImmuneToFire = false;
+        this.setSize(0.5F, 0.5F);
+
     }
 
     protected void applyEntityAttributes()

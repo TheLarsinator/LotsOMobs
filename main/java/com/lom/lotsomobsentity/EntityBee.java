@@ -26,7 +26,7 @@ public class EntityBee extends EntityAnimal
     {
         super(par1World);
 
-        this.setSize(1F, 1F);
+        this.setSize(0.5F, 0.5F);
         this.getNavigator().setAvoidsWater(true);
         BeeZ = this.rand.nextInt(3) +1;
         BeeX = this.rand.nextInt(3) +1;
