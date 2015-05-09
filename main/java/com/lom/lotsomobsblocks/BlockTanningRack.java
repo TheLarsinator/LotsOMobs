@@ -110,6 +110,7 @@ public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer p
       		world.spawnParticle("crit", d0, d1, d2, d3, d4, d5);
       		world.spawnParticle("crit", d0, d1, d2, d3, d4, d5);
     	  }
+    	       heldItem.damageItem(1, player);
       return false;	
       }
       else if(heldItem == null && ((TileEntityTanningRack)world.getTileEntity(x, y, z)).ElephantHide == true && ((TileEntityTanningRack)world.getTileEntity(x, y, z)).CleanHide == true)
@@ -160,6 +161,8 @@ public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer p
       		world.spawnParticle("crit", d0, d1, d2, d3, d4, d5);
       		world.spawnParticle("crit", d0, d1, d2, d3, d4, d5);
     	  }
+    	       heldItem.damageItem(1, player);
+
       return false;	
       }
       else if(heldItem == null && ((TileEntityTanningRack)world.getTileEntity(x, y, z)).DeerHide == true && ((TileEntityTanningRack)world.getTileEntity(x, y, z)).CleanHide == true)

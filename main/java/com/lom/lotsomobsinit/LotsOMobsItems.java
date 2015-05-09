@@ -17,6 +17,7 @@ import com.lom.lotsomobsitems.ItemCactiOnAStick;
 import com.lom.lotsomobsitems.ItemDNA;
 import com.lom.lotsomobsitems.ItemEasterCake;
 import com.lom.lotsomobsitems.ItemFlintAndFossil;
+import com.lom.lotsomobsitems.ItemKnife;
 import com.lom.lotsomobsitems.ItemMaterials;
 import com.lom.lotsomobsitems.ItemMyAxe;
 import com.lom.lotsomobsitems.ItemMyPickaxe;
@@ -213,7 +214,7 @@ public class LotsOMobsItems
 		 Amber = new ItemMaterials().setTextureName(modid + ":Amber").setUnlocalizedName("Amber");		 
 		 IcemintuimBar = new ItemMaterials().setTextureName(modid + ":IcemintuimBar").setUnlocalizedName("IcemintuimBar");		 
 		 WoolyFur = new ItemMaterials().setTextureName(modid + ":WoolyFur").setUnlocalizedName("WoolyFur");
-		 Knife = new ItemMaterials().setTextureName(modid + ":Knife").setUnlocalizedName("Knife");
+		 Knife = new ItemKnife().setTextureName(modid + ":Knife").setUnlocalizedName("Knife");
 		 Rope = new ItemMaterials().setTextureName(modid + ":Rope").setUnlocalizedName("Rope");
 		 Wheel = new ItemMaterials().setTextureName(modid + ":Wheel").setUnlocalizedName("Wheel");
 		 Salt = new ItemMaterials().setTextureName(modid + ":Salt").setUnlocalizedName("Salt");

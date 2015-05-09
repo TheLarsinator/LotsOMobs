@@ -142,6 +142,9 @@ public class ConfigHandler
 	public static int IceAgeTerrainID = 47;
 	public static int TropicBeachID = 55;
 	
+	//Other Configs
+	public static int knifeDamage = 100;
+	
 	public static void LoadFile(File configFile)
 	{
 		config = new Configuration(configFile);
@@ -217,6 +220,8 @@ public class ConfigHandler
 
 		newBiomes = config.getBoolean("Biomes", "general", newBiomes, "Turn biomes on/off");	
 		newDimensions = config.getBoolean("Dimensions", "general", newDimensions, "Turn dimensions on/off");	
+		knifeDamage = config.getInt("KnifeDamage", "general", knifeDamage, 0, 1000, "Set the damage for the knife.");
+
 		
 		DeerRate = config.getFloat("Deer spawn rate", "spawn", DeerRate, -1, 10, "Set Deer spawn rate");
 		BoarRate = config.getFloat("Boar spawn rate", "spawn", BoarRate, -1, 10, "Set Boar spawn rate");
