@@ -72,6 +72,9 @@ public class ConfigHandler
 	public static boolean BisonOn = true;
 	public static boolean AmmoniteOn = true;
 
+	//Disable biomes
+	public static boolean newBiomes = true;
+	public static boolean newDimensions = true;
 	
 	//Spawn Rates
 	public static float DeerRate = 2.0F;
@@ -212,6 +215,9 @@ public class ConfigHandler
 		BisonOn = config.getBoolean("Bison", "mobs", BisonOn, "Turn the Bison on/off");	
 		AmmoniteOn = config.getBoolean("Ammonite", "mobs", AmmoniteOn, "Turn the Ammonite on/off");	
 
+		newBiomes = config.getBoolean("Biomes", "general", newBiomes, "Turn biomes on/off");	
+		newDimensions = config.getBoolean("Dimensions", "general", newDimensions, "Turn dimensions on/off");	
+		
 		DeerRate = config.getFloat("Deer spawn rate", "spawn", DeerRate, -1, 10, "Set Deer spawn rate");
 		BoarRate = config.getFloat("Boar spawn rate", "spawn", BoarRate, -1, 10, "Set Boar spawn rate");
 		BirdRate = config.getFloat("Bird spawn rate", "spawn", BirdRate, -1, 10, "Set Bird spawn rate");

@@ -51,6 +51,9 @@ public void generateSurface(World world, Random rand, int chunkX, int chunkZ)
 {
 	BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ); 
 
+	if(ConfigHandler.newDimensions)
+	{
+	
     if(biome instanceof BiomeGenIcePlains){
 	for (int i = 0; i < 7; i++) {
 	int randPosX = chunkX + rand.nextInt(16);
@@ -94,6 +97,7 @@ public void generateSurface(World world, Random rand, int chunkX, int chunkZ)
 	int randPosZ = chunkZ + rand.nextInt(16);
 	(new WorldGenMinable(LotsOMobsBlocks.SaltOre, 10)).generate(world, rand,
 	randPosX, randPosY, randPosZ);
+	}
 	}
 	}
 }

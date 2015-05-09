@@ -103,7 +103,7 @@ public class LotsOMobsMobs
 		        EntityRegistry.addSpawn(EntityBird.class, (int)ConfigHandler.BirdRate *10, 1, 4, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.beach, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills, BiomeGenBase.coldTaiga, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.iceMountains, BiomeGenBase.jungle, BiomeGenBase.icePlains, BiomeGenBase.plains, BiomeGenBase.mesa, BiomeGenBase.mesaPlateau, BiomeGenBase.mesaPlateau_F, BiomeGenBase.roofedForest, BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.swampland});
 		        EntityRegistry.addSpawn(EntityBird.class, (int)ConfigHandler.BirdRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.PLAINS));
 
-				}
+				} 
 				if(ConfigHandler.SquirrelOn == true)
 				{    
 			        EntityRegistry.registerGlobalEntityID(EntitySquirrel.class,  mobid + "Squirrel", EntityRegistry.findGlobalUniqueEntityId(), 0x634205, 0x633405);
@@ -299,21 +299,30 @@ public class LotsOMobsMobs
 				if(ConfigHandler.NarwalOn == true)
 				{
 			        EntityRegistry.registerGlobalEntityID(EntityNarwal.class, mobid + "Narwal", EntityRegistry.findGlobalUniqueEntityId(), 0x000000, 0x43607D);
+			    	if(ConfigHandler.newBiomes)
+			    	{ 
 			        EntityRegistry.addSpawn(EntityNarwal.class, (int)ConfigHandler.NarwhaleRate *10, 1, 12, EnumCreatureType.waterCreature, new BiomeGenBase[] {BiomeGenBase.ocean, BiomeGenBase.frozenOcean, LotsOMobsBiomes.modBiomeArcticOcean});
+			    	}
 			        EntityRegistry.addSpawn(EntityNarwal.class, (int)ConfigHandler.NarwhaleRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.OCEAN));
 
 				}
 				if(ConfigHandler.PenguinOn == true)
 				{ 
 			        EntityRegistry.registerGlobalEntityID(EntityPenguin.class, mobid + "Penguin", EntityRegistry.findGlobalUniqueEntityId(), 0x000000, 0xFFFFFF);
+			    	if(ConfigHandler.newBiomes)
+			    	{ 
 			     	EntityRegistry.addSpawn(EntityPenguin.class, (int)ConfigHandler.PenguinRate *10, 4, 12, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeAntartica, LotsOMobsBiomes.modBiomeArcticOcean, BiomeGenBase.icePlains});
+			    	}
 			        EntityRegistry.addSpawn(EntityPenguin.class, (int)ConfigHandler.PenguinRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.SNOWY));
 
 				}
 				if(ConfigHandler.IceBearOn == true)
 				{
 			    	EntityRegistry.registerGlobalEntityID(EntityPolarBear.class, mobid + "Icebear", EntityRegistry.findGlobalUniqueEntityId() , 0xFAF4F0, 0xFFFFFF);
-			 	  	EntityRegistry.addSpawn(EntityPolarBear.class, (int)ConfigHandler.IceBearRate *10, 4, 5, EnumCreatureType.monster, new BiomeGenBase[] {BiomeGenBase.frozenOcean, LotsOMobsBiomes.modBiomeArcticOcean, BiomeGenBase.icePlains});
+			    	if(ConfigHandler.newBiomes)
+			    	{ 
+			    	EntityRegistry.addSpawn(EntityPolarBear.class, (int)ConfigHandler.IceBearRate *10, 4, 5, EnumCreatureType.monster, new BiomeGenBase[] {BiomeGenBase.frozenOcean, LotsOMobsBiomes.modBiomeArcticOcean, BiomeGenBase.icePlains});
+			    	}
 			        EntityRegistry.addSpawn(EntityPolarBear.class, (int)ConfigHandler.IceBearRate *10, 1, 4, EnumCreatureType.monster, BiomeDictionary.getBiomesForType(Type.SNOWY));
 
 				}
@@ -359,14 +368,20 @@ public class LotsOMobsMobs
 				if(ConfigHandler.HermitCrabOn == true)
 				{  
 					EntityRegistry.registerGlobalEntityID(EntityHermitCrab.class, mobid + "HermitCrab", EntityRegistry.findGlobalUniqueEntityId(), 0xF77F07, 0x875420);
+					if(ConfigHandler.newBiomes)
+					{ 
 					EntityRegistry.addSpawn(EntityHermitCrab.class, (int)ConfigHandler.HermitCrabRate *10, 2, 6, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.beach, BiomeGenBase.ocean, LotsOMobsBiomes.modBiomeTropical});
-		    		EntityRegistry.registerGlobalEntityID(EntityShell.class, "Shell", EntityRegistry.findGlobalUniqueEntityId());		
+					}
+					EntityRegistry.registerGlobalEntityID(EntityShell.class, "Shell", EntityRegistry.findGlobalUniqueEntityId());		
 		        	EntityRegistry.addSpawn(EntityHermitCrab.class, (int)ConfigHandler.HermitCrabRate *10, 1, 4, EnumCreatureType.monster, BiomeDictionary.getBiomesForType(Type.BEACH));
 				}
 				if(ConfigHandler.FishyOn == true)
 				{    
 			        EntityRegistry.registerGlobalEntityID(EntityTropicalFishy.class, mobid + "TFishy", EntityRegistry.findGlobalUniqueEntityId(), 0xF78A2A, 0x000000);
+			    	if(ConfigHandler.newBiomes)
+			    	{ 
 			        EntityRegistry.addSpawn(EntityTropicalFishy.class, (int)ConfigHandler.FishyRate *30, 8, 20, EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeTropical});
+			    	}
 			    }
 				if(ConfigHandler.GoatOn == true)
 				{    
@@ -377,32 +392,38 @@ public class LotsOMobsMobs
 				{  
 			        //Dinosaurs
 			        EntityRegistry.registerGlobalEntityID(EntityTriceratops.class,  mobid + "Triceratops", EntityRegistry.findGlobalUniqueEntityId(), 0x79B814, 0x416606);
+					 if(ConfigHandler.newDimensions)
 			        EntityRegistry.addSpawn(EntityTriceratops.class,  (int)ConfigHandler.TriceratopsRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
 				}
 				if(ConfigHandler.BrontosaurusOn == true)
 				{   
 			        EntityRegistry.registerGlobalEntityID(EntityBrontosaurus.class,  mobid + "Brontosaurus", EntityRegistry.findGlobalUniqueEntityId(), 0xADADAD, 0x7A797A);
-			        EntityRegistry.addSpawn(EntityBrontosaurus.class,  (int)ConfigHandler.BrontosaurusRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityBrontosaurus.class,  (int)ConfigHandler.BrontosaurusRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
 			        }
 				if(ConfigHandler.TRexOn == true)
 				{  
 			        EntityRegistry.registerGlobalEntityID(EntityTRex.class, mobid +  "TRex", EntityRegistry.findGlobalUniqueEntityId(), 0x2B6308, 0x182410);
-			        EntityRegistry.addSpawn(EntityTRex.class,  (int)ConfigHandler.TRexRate *10,  1,  1,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityTRex.class,  (int)ConfigHandler.TRexRate *10,  1,  1,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
 				}
 				if(ConfigHandler.PterosaurusOn == true)
 				{  
 			        EntityRegistry.registerGlobalEntityID(EntityPterosaurus.class,  mobid + "Pterosaurus", EntityRegistry.findGlobalUniqueEntityId(), 0xC3C99B, 0x2B6308);
-			        EntityRegistry.addSpawn(EntityPterosaurus.class,  (int)ConfigHandler.PterosaurRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityPterosaurus.class,  (int)ConfigHandler.PterosaurRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
 				}
 				if(ConfigHandler.IchtyosaurusOn == true)
 				{  
 			        EntityRegistry.registerGlobalEntityID(EntityIchtyosaurus.class,  mobid + "Ichtyosaurus", EntityRegistry.findGlobalUniqueEntityId(), 0x374392, 0xe6d5b5);
-			        EntityRegistry.addSpawn(EntityIchtyosaurus.class,  (int)ConfigHandler.IchtyosaurusRate *10,  5, 8,  EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoOcean});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityIchtyosaurus.class,  (int)ConfigHandler.IchtyosaurusRate *10,  5, 8,  EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoOcean});
 				}
 				if(ConfigHandler.RaptorOn == true)
 				{  
 			        EntityRegistry.registerGlobalEntityID(EntityRaptor.class,  mobid + "Raptor", EntityRegistry.findGlobalUniqueEntityId(),  0xEDCBA4, 0xBA6B11);
-			        EntityRegistry.addSpawn(EntityRaptor.class,  (int)ConfigHandler.RaptorRate *10,  5, 8,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityRaptor.class,  (int)ConfigHandler.RaptorRate *10,  5, 8,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoPlains, LotsOMobsBiomes.modBiomeDinoIslands, LotsOMobsBiomes.modBiomeDinoJungle, LotsOMobsBiomes.modBiomeDinoMountains, LotsOMobsBiomes.modBiomeDinoOcean});
 				}
 				if(ConfigHandler.EasterBunnyOn == true)
 				{   
@@ -423,17 +444,20 @@ public class LotsOMobsMobs
 				if(ConfigHandler.MammothOn == true)
 				{    
 			        EntityRegistry.registerGlobalEntityID(EntityMammoth.class, mobid +  "Mammoth", EntityRegistry.findGlobalUniqueEntityId(), 0x4A2710, 0x85471D);
-			        EntityRegistry.addSpawn(EntityMammoth.class,  (int)ConfigHandler.MammothRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeIcePlains, LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIceIslands});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityMammoth.class,  (int)ConfigHandler.MammothRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeIcePlains, LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIceIslands});
 				}
 				if(ConfigHandler.SaberToothOn == true)
 				{   
 			        EntityRegistry.registerGlobalEntityID(EntitySaberTooth.class, mobid +  "SaberTooth", EntityRegistry.findGlobalUniqueEntityId(), 0x6c4821, 0xcab7a0);
-			        EntityRegistry.addSpawn(EntitySaberTooth.class,  (int)ConfigHandler.SaberToothRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeIcePlains, LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIceIslands});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntitySaberTooth.class,  (int)ConfigHandler.SaberToothRate *10,  1,  2,  EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeIcePlains, LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIceIslands});
 				}
 				if(ConfigHandler.MuskOxOn == true)
 				{  
 			    	EntityRegistry.registerGlobalEntityID(EntityMuskOx.class, mobid + "MuskOx", EntityRegistry.findGlobalUniqueEntityId(), 0x8b6a4e, 0x64493d);
-			     	EntityRegistry.addSpawn(EntityMuskOx.class, (int)ConfigHandler.MuskOxRate *10, 6, 9, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeIcePlains, LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIceIslands});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityMuskOx.class, (int)ConfigHandler.MuskOxRate *10, 6, 9, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeIcePlains, LotsOMobsBiomes.modBiomeIceMountains, LotsOMobsBiomes.modBiomeIceOcean, LotsOMobsBiomes.modBiomeIceIslands});
 				}
 				if(ConfigHandler.GazelleOn == true)
 				{  
@@ -445,6 +469,7 @@ public class LotsOMobsMobs
 				if(ConfigHandler.SharkOn == true)
 				{
 					EntityRegistry.registerGlobalEntityID(EntityHammerShark.class, mobid + "HammerShark", EntityRegistry.findGlobalUniqueEntityId(), 0x959595, 0x7d7d7d);
+					if(ConfigHandler.newBiomes)
 			        EntityRegistry.addSpawn(EntityHammerShark.class, (int)ConfigHandler.SharkRate *20, 3, 5, EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeTropical});
 			        EntityRegistry.addSpawn(EntityHammerShark.class, (int)ConfigHandler.SharkRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.OCEAN));
 			        EntityRegistry.addSpawn(EntityShark.class, (int)ConfigHandler.SharkRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.OCEAN));
@@ -455,8 +480,10 @@ public class LotsOMobsMobs
 				if(ConfigHandler.CrabOn == true)
 				{
 					EntityRegistry.registerGlobalEntityID(EntityCrab.class, mobid + "Crab", EntityRegistry.findGlobalUniqueEntityId(), 0xb1360a, 0xed5523);
-			        EntityRegistry.addSpawn(EntityCrab.class, (int)ConfigHandler.CrabRate *10, 3, 5, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeTropical, BiomeGenBase.beach});
-		        	EntityRegistry.addSpawn(EntityCrab.class, (int)ConfigHandler.CrabRate *10, 1, 4, EnumCreatureType.monster, BiomeDictionary.getBiomesForType(Type.BEACH));
+					if(ConfigHandler.newBiomes)
+				    EntityRegistry.addSpawn(EntityCrab.class, (int)ConfigHandler.CrabRate *10, 3, 5, EnumCreatureType.creature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeTropical});
+			        EntityRegistry.addSpawn(EntityCrab.class, (int)ConfigHandler.CrabRate *10, 3, 5, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.beach});
+					EntityRegistry.addSpawn(EntityCrab.class, (int)ConfigHandler.CrabRate *10, 1, 4, EnumCreatureType.monster, BiomeDictionary.getBiomesForType(Type.BEACH));
 
 				}
 				if(ConfigHandler.MoleOn == true)
@@ -475,7 +502,8 @@ public class LotsOMobsMobs
 				if(ConfigHandler.AmmoniteOn == true)
 				{  
 			    	EntityRegistry.registerGlobalEntityID(EntityAmmonite.class, mobid + "Ammonite", EntityRegistry.findGlobalUniqueEntityId(), 0x8c6239, 0xec8c6f);
-			     	EntityRegistry.addSpawn(EntityAmmonite.class, (int) ConfigHandler.AmmoniteRate * 10, 6, 9, EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoOcean});
+					 if(ConfigHandler.newDimensions)
+						 EntityRegistry.addSpawn(EntityAmmonite.class, (int) ConfigHandler.AmmoniteRate * 10, 6, 9, EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoOcean});
 				}
 	}
 

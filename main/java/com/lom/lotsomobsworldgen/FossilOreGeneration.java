@@ -33,7 +33,9 @@ public void generateNether() {
 //we're not doing ore ore in the nether
 }
 
-public void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
+public void generateSurface(World world, Random rand, int chunkX, int chunkZ) 
+{
+		
 for (int i = 0; i < 10; i++) {
 int randPosX = chunkX + rand.nextInt(16);
 int randPosY = rand.nextInt(64);

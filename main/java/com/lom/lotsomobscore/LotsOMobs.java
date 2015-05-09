@@ -33,7 +33,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.0.3", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.0.4", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais
@@ -78,7 +78,9 @@ public class LotsOMobs
 	     LotsOMobsAchievementsBook.Init();
 
 	     GameRegistry.registerWorldGenerator(new FossilOreGeneration(), 2);
+	     if(ConfigHandler.newDimensions)
 	     GameRegistry.registerWorldGenerator(new OreGeneration(), 2);
+	     if(ConfigHandler.newBiomes)
 	     GameRegistry.registerWorldGenerator(new WorldGenRegister(), 2);
 		// proxy.registerSound();
 		}

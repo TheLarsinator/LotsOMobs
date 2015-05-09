@@ -42,18 +42,12 @@ public class LotsOMobsBiomes
 	public static void Init()
 	{
 		//Biomes
+	if(ConfigHandler.newBiomes)
+	{ 
 		 modBiomeAntartica = new BiomeGenAntartica(ConfigHandler.AntarticaID).setColor(747097).setBiomeName("Antartica");
 		 modBiomeArcticOcean = new BiomeGenArcticOcean(ConfigHandler.ArcticOceanID).setColor(747097).setBiomeName("Arctic Ocean");
-		 modBiomeDinoPlains = new BiomeGenDinoPlains(ConfigHandler.DinoTerrainID).setColor(6546587).setBiomeName("Dino Plains");
-		 modBiomeDinoMountains = new BiomeGenDinoMountains(ConfigHandler.DinoTerrainID+1).setColor(6546587).setBiomeName("Dino Mountains");
-		 modBiomeDinoOcean = new BiomeGenDinoOcean(ConfigHandler.DinoTerrainID+2).setColor(6546587).setBiomeName("Dino Ocean");
-		 modBiomeDinoIslands = new BiomeGenDinoIslands(ConfigHandler.DinoTerrainID+3).setColor(6546587).setBiomeName("Dino Islands");
-		 modBiomeDinoJungle = new BiomeGenDinoJungle(ConfigHandler.DinoTerrainID+4).setColor(6546587).setBiomeName("Dino Jungle");	
-		 modBiomeIcePlains = new BiomeGenIcePlains(ConfigHandler.IceAgeTerrainID).setColor(6546587).setBiomeName("Ice Plains");
-		 modBiomeIceMountains = new BiomeGenIceMountains(ConfigHandler.IceAgeTerrainID+1).setColor(6546587).setBiomeName("Ice Mountains");
-		 modBiomeIceOcean = new BiomeGenIceOcean(ConfigHandler.IceAgeTerrainID+2).setColor(6546587).setBiomeName("Ice Ocean");
-		 modBiomeIceIslands = new BiomeGenIceIslands(ConfigHandler.IceAgeTerrainID+3).setColor(6546587).setBiomeName("Ice Islands");
 		 modBiomeTropical = new BiomeGenTropical(ConfigHandler.TropicBeachID).setColor(747097).setBiomeName("Tropical Beach");
+		 
 
 		 BiomeManager.icyBiomes.add(new BiomeEntry(modBiomeAntartica, 50));
 		 
@@ -67,11 +61,26 @@ public class LotsOMobsBiomes
 		 
 		 BiomeDictionary.registerBiomeType(modBiomeAntartica, Type.WASTELAND);
 		 BiomeDictionary.registerBiomeType(modBiomeTropical, Type.BEACH);
+	}
+		 
 //Dimensions
+		 if(ConfigHandler.newDimensions)
+		 {
+		 modBiomeDinoPlains = new BiomeGenDinoPlains(ConfigHandler.DinoTerrainID).setColor(6546587).setBiomeName("Dino Plains");
+		 modBiomeDinoMountains = new BiomeGenDinoMountains(ConfigHandler.DinoTerrainID+1).setColor(6546587).setBiomeName("Dino Mountains");
+		 modBiomeDinoOcean = new BiomeGenDinoOcean(ConfigHandler.DinoTerrainID+2).setColor(6546587).setBiomeName("Dino Ocean");
+		 modBiomeDinoIslands = new BiomeGenDinoIslands(ConfigHandler.DinoTerrainID+3).setColor(6546587).setBiomeName("Dino Islands");
+		 modBiomeDinoJungle = new BiomeGenDinoJungle(ConfigHandler.DinoTerrainID+4).setColor(6546587).setBiomeName("Dino Jungle");	
+		 modBiomeIcePlains = new BiomeGenIcePlains(ConfigHandler.IceAgeTerrainID).setColor(6546587).setBiomeName("Ice Plains");
+		 modBiomeIceMountains = new BiomeGenIceMountains(ConfigHandler.IceAgeTerrainID+1).setColor(6546587).setBiomeName("Ice Mountains");
+		 modBiomeIceOcean = new BiomeGenIceOcean(ConfigHandler.IceAgeTerrainID+2).setColor(6546587).setBiomeName("Ice Ocean");
+		 modBiomeIceIslands = new BiomeGenIceIslands(ConfigHandler.IceAgeTerrainID+3).setColor(6546587).setBiomeName("Ice Islands");
+		 
 		DimensionManager.registerProviderType(ConfigHandler.dimension, WorldProviderDino.class, false);
 		DimensionManager.registerDimension(ConfigHandler.dimension, ConfigHandler.dimension);
 		
 		DimensionManager.registerProviderType(ConfigHandler.dimension2, WorldProviderIceAge.class, false);
 		DimensionManager.registerDimension(ConfigHandler.dimension2, ConfigHandler.dimension2);
+		 }
 	}
 }

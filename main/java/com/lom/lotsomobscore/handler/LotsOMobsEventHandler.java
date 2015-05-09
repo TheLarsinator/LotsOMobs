@@ -85,6 +85,8 @@ public class LotsOMobsEventHandler
 	@SubscribeEvent
 	public void OnTeleport(PlayerEvent.PlayerChangedDimensionEvent event)
 	{
+		if(ConfigHandler.newDimensions)
+		{
 		if(event.toDim == ConfigHandler.dimension)
 		{
 			event.player.addStat(LotsOMobsAchievementsBook.AchievementDino, 1);
@@ -92,6 +94,7 @@ public class LotsOMobsEventHandler
 		else if(event.toDim == ConfigHandler.dimension2)
 		{
 			event.player.addStat(LotsOMobsAchievementsBook.AchievementIceAge, 1);
+		}
 		}
 	}
 	

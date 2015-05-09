@@ -29,6 +29,7 @@ import com.lom.lotsomobsblocks.BlockSaltOre;
 import com.lom.lotsomobsblocks.BlockSpinningWheel;
 import com.lom.lotsomobsblocks.BlockTanningRack;
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobscrops.BlockPineApple;
 import com.lom.lotsomobscrops.BlockTomato;
 import com.lom.lotsomobsdna.BlockDNAExtractor;
@@ -98,26 +99,31 @@ public class LotsOMobsBlocks
 		//Blocks
 		PineAppleBlock = new BlockPineApple().setHardness(0.1F).setBlockName("PineApple");
 		TomatoBlock = new BlockTomato().setHardness(0.1F).setBlockName("Tomato");
+		 if(ConfigHandler.newDimensions)
+		 {
 		DinoPortal = new BlockDinoPortal(0).setHardness(0.1F).setBlockName("DinoPortal");
 		IcePortal = new BlockIcePortal(0).setHardness(0.1F).setBlockName("IcePortal");
 		DinoLeaves = new BlockDinoLeaves().setHardness(0.1F).setBlockName("DinoLeaves");
 		DinoLog = new BlockDinoLog(Material.wood).setHardness(8.3F).setBlockName("DinoLog");
 		AncientFire = new BlockAncientFire().setHardness(0.0F).setBlockName("AncientFire");
-		FossilOre = new BlockFossilOre(2, 0).setBlockName("FossilOre").setHardness(1.3F);
 		AmberOre = new BlockAmberOre(2, 0).setBlockName("AmberOre").setHardness(10.9F);
-		SaltOre = new BlockSaltOre(2, 0).setBlockName("SaltOre").setHardness(10.9F);
 		IceStone= new BlockIceStone(0, null).setBlockName("IceStone").setHardness(10.9F);
 		IceCobble = new BlockIceCobble(0, null).setBlockName("IceCobble").setHardness(10.9F);
 		DinoWoodPlanks = new BlockDinoWoodPlanks(Material.wood).setBlockName("DinoWoodPlanks").setHardness(2F).setResistance(8F);
 		DinoWoodStairs = new BlockDinoWoodStairs().setBlockName("DinoWoodStairs").setHardness(2F).setResistance(8F);
+		IcemintuimOre = new BlockIcemintuimOre(2, 0).setBlockName("IcemintuimOre").setHardness(10.9F).setBlockName("IcemintuimOre");
+		IceCoal = new BlockIceCoal(2, 0).setBlockName("IceCoal").setHardness(10.9F).setBlockName("IceCoal");
+		IceIron = new BlockIceIron(2, 0).setBlockName("IceIron").setHardness(10.9F).setBlockName("IceIron");
+		 }
+			FossilOre = new BlockFossilOre(2, 0).setBlockName("FossilOre").setHardness(1.3F);
+
+		SaltOre = new BlockSaltOre(2, 0).setBlockName("SaltOre").setHardness(10.9F);
 		EasterCake1Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake1").setBlockTextureName("EasterCake1");
 		EasterCake2Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake2").setBlockTextureName("EasterCake2");
 		EasterCake3Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake3").setBlockTextureName("EasterCake3");
 		EasterCake4Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake4").setBlockTextureName("EasterCake4");
 		EasterCake5Block = new BlockEasterCake().setHardness(0.1F).setBlockName("EasterCake5").setBlockTextureName("EasterCake5");
-		IcemintuimOre = new BlockIcemintuimOre(2, 0).setBlockName("IcemintuimOre").setHardness(10.9F).setBlockName("IcemintuimOre");
-		IceCoal = new BlockIceCoal(2, 0).setBlockName("IceCoal").setHardness(10.9F).setBlockName("IceCoal");
-		IceIron = new BlockIceIron(2, 0).setBlockName("IceIron").setHardness(10.9F).setBlockName("IceIron");
+
 		PalmLog = new BlockPalmLog(Material.wood).setHardness(8.3F).setBlockName("PalmLog");
 		PalmLeaves = new BlockPalmLeaves().setHardness(0.1F).setBlockName("PalmLeaves");
 		Coral1 = new BlockCoral(Material.water, 1).setHardness(0.1F).setBlockName("Coral1");
@@ -142,26 +148,30 @@ public class LotsOMobsBlocks
 		//Register Blocks
 		GameRegistry.registerBlock(PineAppleBlock, "PineAppleBlock");
 		GameRegistry.registerBlock(TomatoBlock, "TomatoBlock");
+		 if(ConfigHandler.newDimensions)
+		 {
 		GameRegistry.registerBlock(DinoPortal, "DinoPortal");
 		GameRegistry.registerBlock(DinoLeaves, "DinoLeaves");
 		GameRegistry.registerBlock(DinoLog, "DinoLog");
 		GameRegistry.registerBlock(AncientFire, "AncientFire");
 		GameRegistry.registerBlock(FossilOre, "FossilOre");
 		GameRegistry.registerBlock(AmberOre, "AmberOre");
-		GameRegistry.registerBlock(SaltOre, "SaltOre");
 		GameRegistry.registerBlock(IceStone, "IceStone");
 		GameRegistry.registerBlock(IceCobble, "IceCobble");
 		GameRegistry.registerBlock(IcePortal, "IcePortal");
 		GameRegistry.registerBlock(DinoWoodPlanks, "DinoPlanks");
 		GameRegistry.registerBlock(DinoWoodStairs, "DinoStairs");
+		GameRegistry.registerBlock(IceCoal, "IceCoal");
+		GameRegistry.registerBlock(IceIron, "IceIron");
+		GameRegistry.registerBlock(IcemintuimOre, "IcemintuimOre");
+		 }
+		GameRegistry.registerBlock(SaltOre, "SaltOre");
 		GameRegistry.registerBlock(EasterCake1Block, "EasterCake1Block");
 		GameRegistry.registerBlock(EasterCake2Block, "EasterCake2Block");
 		GameRegistry.registerBlock(EasterCake3Block, "EasterCake3Block");
 		GameRegistry.registerBlock(EasterCake4Block, "EasterCake4Block");
 		GameRegistry.registerBlock(EasterCake5Block, "EasterCake5Block");
-		GameRegistry.registerBlock(IceCoal, "IceCoal");
-		GameRegistry.registerBlock(IceIron, "IceIron");
-		GameRegistry.registerBlock(IcemintuimOre, "IcemintuimOre");
+
 		GameRegistry.registerBlock(PalmLog, "PalmLog");
 		GameRegistry.registerBlock(PalmLeaves, "PalmLeaves");
 		GameRegistry.registerBlock(Coral1, "Coral1");

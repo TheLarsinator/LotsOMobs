@@ -153,8 +153,11 @@ public class LotsOMobsRecipes
 		 GameRegistry.addRecipe(new ItemStack(AmberAxe, 1), new Object [] {"##", "X#", "X ", Character.valueOf('#'), Amber, Character.valueOf('X'), DinoBone});
 		 GameRegistry.addRecipe(new ItemStack(AmberHoe, 1), new Object [] {"##", " X", " X", Character.valueOf('#'), Amber, Character.valueOf('X'), DinoBone});
 		 GameRegistry.addRecipe(new ItemStack(AmberHoe, 1), new Object [] {"##", "X ", "X ", Character.valueOf('#'), Amber, Character.valueOf('X'), DinoBone});
+		 if(ConfigHandler.newDimensions)
 		 GameRegistry.addRecipe(new ItemStack(TimeTraveler, 1), new Object [] {"#P#", "RXR", "#A#", Character.valueOf('#'), Items.iron_ingot, Character.valueOf('P'), DinoPortal, Character.valueOf('R'), Items.redstone, Character.valueOf('X'), Blocks.stone_button, Character.valueOf('A'), Amber});
 		 
+		 if(ConfigHandler.newDimensions)
+		 {
 		 GameRegistry.addShapelessRecipe(new ItemStack(DinoPortal, 1), new Object[]{ FlintAndFossil, FossilTri });
 		 GameRegistry.addShapelessRecipe(new ItemStack(DinoPortal, 1), new Object[]{ FlintAndFossil, FossilBro });
 		 GameRegistry.addShapelessRecipe(new ItemStack(DinoPortal, 1), new Object[]{ FlintAndFossil, FossilRap });
@@ -169,7 +172,7 @@ public class LotsOMobsRecipes
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilPte });
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilMam });
 		 GameRegistry.addShapelessRecipe(new ItemStack(FlintAndFossil, 1), new Object[]{ Items.flint, FossilIch });
-
+		 }
 		 GameRegistry.addShapelessRecipe(new ItemStack(Triceratops, 1), new Object[]{ Items.egg, DNATri });
 		 GameRegistry.addShapelessRecipe(new ItemStack(Brontosaurus, 1), new Object[]{ Items.egg, DNABro });
 		 GameRegistry.addShapelessRecipe(new ItemStack(Raptor, 1), new Object[]{ Items.egg, DNARap });
@@ -185,6 +188,8 @@ public class LotsOMobsRecipes
 		 GameRegistry.addRecipe(new ItemStack(LotsOMobsBlocks.DNAExtractor, 1), new Object [] {"###", "AGX", "#C#", Character.valueOf('X'), IcemintuimBar,Character.valueOf('A'), Amber, Character.valueOf('G'), Blocks.glass, Character.valueOf('#'), Items.iron_ingot, Character.valueOf('C'), Items.cauldron});
 		 GameRegistry.addRecipe(new ItemStack(DNASolvent, 1), new Object [] {"#", "X", Character.valueOf('X'), Items.potionitem, Character.valueOf('#'), Blocks.tallgrass});
 
+		 if(ConfigHandler.newDimensions)
+		 {
 		 GameRegistry.addRecipe(new ItemStack(Items.stick, 4), new Object [] {"#", "#", Character.valueOf('#'), DinoWoodPlanks});
 		 GameRegistry.addRecipe(new ItemStack(DinoWoodPlanks, 4), new Object [] {"#", Character.valueOf('#'), DinoLog});	 
 		 GameRegistry.addRecipe(new ItemStack(Items.wooden_pickaxe, 1), new Object [] {"###", " X ", " X ", Character.valueOf('#'), DinoWoodPlanks, Character.valueOf('X'), Items.stick});
@@ -199,6 +204,7 @@ public class LotsOMobsRecipes
 		 GameRegistry.addRecipe(new ItemStack(Items.wooden_door, 1), new Object [] {"##", "##", "##", Character.valueOf('#'), DinoWoodPlanks});
 		 GameRegistry.addRecipe(new ItemStack(Blocks.chest, 1), new Object [] {"###", "# #","###",  Character.valueOf('#'), DinoWoodPlanks});
 		 GameRegistry.addRecipe(new ItemStack(Items.sign, 1), new Object [] {"###", "###", " X ", Character.valueOf('#'), DinoWoodPlanks, Character.valueOf('X'), Items.stick});
+		 }
 		 GameRegistry.addRecipe(new ItemStack(EasterCake1, 1), new Object [] {"###", "XCX", "ZZZ", Character.valueOf('#'), Items.milk_bucket, Character.valueOf('X'), Items.sugar, Character.valueOf('C'), EasterEgg1, Character.valueOf('Z'), Items.wheat});
 		 GameRegistry.addRecipe(new ItemStack(EasterCake2, 1), new Object [] {"###", "XCX", "ZZZ", Character.valueOf('#'), Items.milk_bucket, Character.valueOf('X'), Items.sugar, Character.valueOf('C'), EasterEgg2, Character.valueOf('Z'), Items.wheat});
 		 GameRegistry.addRecipe(new ItemStack(EasterCake3, 1), new Object [] {"###", "XCX", "ZZZ", Character.valueOf('#'), Items.milk_bucket, Character.valueOf('X'), Items.sugar, Character.valueOf('C'), EasterEgg3, Character.valueOf('Z'), Items.wheat});

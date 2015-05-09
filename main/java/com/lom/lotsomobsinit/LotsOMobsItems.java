@@ -9,6 +9,7 @@ import net.minecraft.item.ItemSword;
 
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscore.LotsOMobsProxy;
+import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobscrops.ItemMyFoodSeed;
 import com.lom.lotsomobsitems.IceTimeTraveler;
 import com.lom.lotsomobsitems.Item3DArmor;
@@ -195,11 +196,19 @@ public class LotsOMobsItems
 		 RawVenison = new MyFood(3, 1F, false).setTextureName(modid + ":" + "RawVenison").setUnlocalizedName("RawVenison");
 		 SmashedBug = new ItemMaterials().setTextureName(modid + ":SmashedBug").setUnlocalizedName("SmashedBug");
 		 CactiOnAStick = new ItemCactiOnAStick().setTextureName(modid + ":CactiOnAStick").setUnlocalizedName("CactiOnAStick");
-		 FlintAndFossil = new ItemFlintAndFossil(0).setTextureName(modid + ":FlintAndFossil").setUnlocalizedName("FlintAndFossil");
 		 DinoBone = new ItemMaterials().setTextureName(modid + ":DinoBone").setUnlocalizedName("DinoBone");
 		 DinoFur = new ItemMaterials().setTextureName(modid + ":DinoFur").setUnlocalizedName("DinoFur");
+		 if(ConfigHandler.newDimensions)
+		 {
 		 TimeTraveler = new ItemTimeTraveler().setTextureName(modid + ":TimeTraveler").setUnlocalizedName("TimeTraveler");
 		 IceTimeTraveler = new IceTimeTraveler().setTextureName(modid + ":IcePortal").setUnlocalizedName("IceTimeTraveler");
+		 FlintAndFossil = new ItemFlintAndFossil(0).setTextureName(modid + ":FlintAndFossil").setUnlocalizedName("FlintAndFossil");
+
+		 GameRegistry.registerItem(TimeTraveler, "TimeTraveler", modid);
+		 GameRegistry.registerItem(IceTimeTraveler, "IceTimeTraveler", modid);
+		 GameRegistry.registerItem(FlintAndFossil, "FlintAndFossil", modid);
+
+		 }
 		 //PortalPlacer = new ItemPortalPlacer().setTextureName(modid + ":PortalPlacer").setUnlocalizedName("PortalPlacer");		 
 		 Amber = new ItemMaterials().setTextureName(modid + ":Amber").setUnlocalizedName("Amber");		 
 		 IcemintuimBar = new ItemMaterials().setTextureName(modid + ":IcemintuimBar").setUnlocalizedName("IcemintuimBar");		 
@@ -347,11 +356,9 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(IvoryBlade, "IvoryBlade", modid);
 		 GameRegistry.registerItem(SmashedBug, "SmashedBug", modid);
 		 GameRegistry.registerItem(CactiOnAStick, "CactiOnAStick", modid);
-		 GameRegistry.registerItem(FlintAndFossil, "FlintAndFossil", modid);
 		 GameRegistry.registerItem(DinoBone, "DinoBone", modid);
 		 GameRegistry.registerItem(DinoFur, "DinoFur", modid);
-		 GameRegistry.registerItem(TimeTraveler, "TimeTraveler", modid);
-		 GameRegistry.registerItem(IceTimeTraveler, "IceTimeTraveler", modid);
+
 		 //GameRegistry.registerItem(PortalPlacer, "PortalPlacer", modid);
 		 GameRegistry.registerItem(Amber, "Amber", modid);
 		 GameRegistry.registerItem(EasterCake1, "EasterCake1", modid);
