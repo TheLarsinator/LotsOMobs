@@ -30,6 +30,9 @@ public class BlockDinoPortal extends BlockBreakable
 {
     public static final int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
     private static final String __OBFID = "CL_00000284";
+    
+    private int telePort = 0;
+
 
     public BlockDinoPortal(int par1)
     {
@@ -176,7 +179,8 @@ public class BlockDinoPortal extends BlockBreakable
     {
     	Random rand = new Random();
     	int Par = rand.nextInt(1000);
-    	if(Par == 1)
+
+    	if(Par == 50)
     	{
         if (par5Entity.ridingEntity == null && par5Entity.riddenByEntity == null)
         {
