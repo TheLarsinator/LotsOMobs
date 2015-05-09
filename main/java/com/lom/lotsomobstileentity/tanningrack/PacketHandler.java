@@ -91,7 +91,7 @@ public enum PacketHandler
         int x;
         int y;
         int z;
-
+        
         boolean hasSalt;
     }
 
@@ -178,7 +178,7 @@ public enum PacketHandler
                     ((TileEntitySaltBathMessage) msg).y = dat.readInt();
                     ((TileEntitySaltBathMessage) msg).z = dat.readInt();
 
-                    boolean hasSalts = dat.readBoolean();
+                    ((TileEntitySaltBathMessage) msg).hasSalt = dat.readBoolean();
 
                     break;
             }

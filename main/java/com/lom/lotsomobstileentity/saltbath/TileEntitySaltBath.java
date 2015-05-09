@@ -1,12 +1,13 @@
 package com.lom.lotsomobstileentity.saltbath;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.lom.lotsomobsblocks.BlockTanningRack;
-
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.fluids.FluidStack;
+
+import com.lom.lotsomobstileentity.tanningrack.PacketHandler;
 
 public class TileEntitySaltBath extends TileEntity
 {
@@ -25,5 +26,11 @@ public class TileEntitySaltBath extends TileEntity
     public void setHasSalt(boolean hasSalt)
     {
 	this.SaltContent=hasSalt;
+    }
+    
+    @Override
+    public Packet getDescriptionPacket()
+    {
+        return PacketHandler.getPacket(this);
     }
 }
