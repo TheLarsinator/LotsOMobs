@@ -42,7 +42,6 @@ public enum PacketHandler
         if(FMLCommonHandler.instance().getSide() == Side.SERVER)
         {
         	System.out.println("Server sided~");
-        	addServerHandler();
         }
 	}
 	
@@ -54,14 +53,7 @@ public enum PacketHandler
         String tileLomCodec = clientChannel.findChannelHandlerNameForType(TELotsOMobsCodec.class);
         clientChannel.pipeline().addAfter(tileLomCodec, "TileEntitySaltBathHandler", new TileEntitySaltBathMessageHandler());
     }
-	
-    @SideOnly(Side.SERVER)
-	private void addServerHandler()
-	{
-        FMLEmbeddedChannel serverChannel = this.channels.get(Side.SERVER);
 
-		String messageCodec = serverChannel.findChannelHandlerNameForType(TELotsOMobsCodec.class);
-	}
     
     private static class TileEntitySaltBathMessageHandler extends SimpleChannelInboundHandler<TileEntitySaltBathMessage>
     {
@@ -75,7 +67,7 @@ public enum PacketHandler
             {
                 TileEntitySaltBath Lom = (TileEntitySaltBath) te;
 
-                Lom.handlePacketData(((TileEntitySaltBathMessage)msg).hasSalt);
+                Lom.handlePacketData(msg.hasSalt);
                 
                 System.out.println("Getting Called!");
             }
@@ -134,7 +126,7 @@ public enum PacketHandler
         public TELotsOMobsCodec()
         {
             addDiscriminator(0, TileEntitySaltBathMessage.class);
-          /*  addDiscriminator(1, TEOrientableMessage.class);
+        /*  addDiscriminator(1, TEOrientableMessage.class);
             addDiscriminator(2, TEPedestalMessage.class);
             addDiscriminator(3, TEPlinthMessage.class);
             addDiscriminator(4, TESocketMessage.class);
@@ -161,6 +153,7 @@ public enum PacketHandler
                     target.writeInt(((TileEntitySaltBathMessage) msg).x);
                     target.writeInt(((TileEntitySaltBathMessage) msg).y);
                     target.writeInt(((TileEntitySaltBathMessage) msg).z);
+                    System.out.println("Am I getting called?");
                     target.writeBoolean(((TileEntitySaltBathMessage) msg).hasSalt);
                     break;
             }
@@ -178,9 +171,8 @@ public enum PacketHandler
                     ((TileEntitySaltBathMessage) msg).x = dat.readInt();
                     ((TileEntitySaltBathMessage) msg).y = dat.readInt();
                     ((TileEntitySaltBathMessage) msg).z = dat.readInt();
-
+                    
                     ((TileEntitySaltBathMessage) msg).hasSalt = dat.readBoolean();
-
                     break;
             }
         }
@@ -195,10 +187,11 @@ public enum PacketHandler
         msg.y = tileLom.yCoord;
         msg.z = tileLom.zCoord;
         msg.hasSalt = tileLom.SaltContent;
+        
+        System.out.println("Im getting the packet!");
 
         return INSTANCE.channels.get(Side.SERVER).generatePacketFrom(msg);
     }
-
     
     public void sendTo(Packet message, EntityPlayerMP player)
     {
@@ -226,4 +219,3 @@ public enum PacketHandler
         this.channels.get(Side.CLIENT).writeAndFlush(message).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE);
     }
 }
-
