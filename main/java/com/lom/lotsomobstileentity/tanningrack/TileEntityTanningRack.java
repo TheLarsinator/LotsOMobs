@@ -20,13 +20,15 @@ public class TileEntityTanningRack extends TileEntity
         this.DeerHide = nbttag.getBoolean("deer");
         this.ElephantHide = nbttag.getBoolean("tid");
         this.CleanHide = nbttag.getBoolean("cleanhide");
+        
+        
     }
  
     public void writeToNBT(NBTTagCompound nbttag)
     {
-        String s = (String)classToNameMap.get(this.getClass());
- 
-        if (s == null)
+    	String s = (String)classToNameMap.get(this.getClass());
+        
+    	if (s == null)
         {
             throw new RuntimeException(this.getClass() + " is missing a mapping! This is a bug!");
         }
@@ -34,6 +36,7 @@ public class TileEntityTanningRack extends TileEntity
         {
                 nbttag.setString("id", s);
         }
+    	
         nbttag.setBoolean("tid", this.ElephantHide);      
         nbttag.setBoolean("deer", this.DeerHide);      
         nbttag.setBoolean("cleanhide", this.CleanHide);      
