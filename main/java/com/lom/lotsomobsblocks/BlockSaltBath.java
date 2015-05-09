@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
@@ -79,14 +80,19 @@ public class BlockSaltBath extends Block implements ITileEntityProvider
 	    	 int I = world.rand.nextInt(10);
 	    	       if(I == 4)
 	    	       {
-	    	    	   if(world.isRemote == false)
+	    	    	   if(!world.isRemote)
 	    	    	   {
 	    	    		EntityItem item = new EntityItem(world, x, y, z, new ItemStack(LotsOMobsItems.ElephantHideSalted));
 	    	    		world.spawnEntityInWorld(item);
 	    	    		player.inventory.consumeInventoryItem(LotsOMobsItems.ElephantHideDirty);
 	    	    	   }
-	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
+
 	        	   }
+	    	       if(I == 4)
+	    	       {
+	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
+	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).markDirty();
+	    	       }
 	    	       else
 	    	       {
 	    	    	double d0 = (double)((float)x + world.rand.nextFloat());
@@ -119,14 +125,18 @@ public class BlockSaltBath extends Block implements ITileEntityProvider
 	    	 int I = world.rand.nextInt(10);
 	    	       if(I == 4)
 	    	       {
-	    	    	   if(world.isRemote == false)
+	    	    	   if(!world.isRemote)
 	    	    	   {
 	    	    		EntityItem item = new EntityItem(world, x, y, z, new ItemStack(LotsOMobsItems.DeerHideSalted));
 	    	    		world.spawnEntityInWorld(item);
 	    	    		player.inventory.consumeInventoryItem(LotsOMobsItems.DeerHideDirty);
 	    	    	   }
-	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
 	        	   }
+	    	       if(I == 4)
+	    	       {
+	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
+	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).markDirty();
+	    	       }
 	    	       else
 	    	       {
 	    	    	double d0 = (double)((float)x + world.rand.nextFloat());

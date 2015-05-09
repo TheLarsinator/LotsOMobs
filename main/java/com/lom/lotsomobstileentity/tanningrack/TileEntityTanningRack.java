@@ -6,6 +6,9 @@ import java.util.Map;
 import com.lom.lotsomobsblocks.BlockTanningRack;
 
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityTanningRack extends TileEntity
@@ -16,6 +19,7 @@ public class TileEntityTanningRack extends TileEntity
  
     public void readFromNBT(NBTTagCompound nbttag)
     {
+		super.readFromNBT(nbttag);
         this.DeerHide = nbttag.getBoolean("deer");
         this.ElephantHide = nbttag.getBoolean("tid");
         this.CleanHide = nbttag.getBoolean("cleanhide");      
@@ -23,6 +27,7 @@ public class TileEntityTanningRack extends TileEntity
  
     public void writeToNBT(NBTTagCompound nbttag)
     {  	
+		super.writeToNBT(nbttag);
         nbttag.setBoolean("tid", this.ElephantHide);      
         nbttag.setBoolean("deer", this.DeerHide);      
         nbttag.setBoolean("cleanhide", this.CleanHide);      
@@ -40,4 +45,19 @@ public class TileEntityTanningRack extends TileEntity
     {
     	this.CleanHide=isClean;
     }
+    
+	@Override
+	public Packet getDescriptionPacket() 
+	{
+	  NBTTagCompound nbt = new NBTTagCompound();
+	  writeToNBT(nbt);
+	  S35PacketUpdateTileEntity packet = new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, this.blockMetadata, nbt);
+	  return packet;
+	 }
+	
+	@Override
+	public void onDataPacket(NetworkManager arg0, S35PacketUpdateTileEntity arg1) 
+	{
+	  readFromNBT(arg1.func_148857_g());
+	}
 }

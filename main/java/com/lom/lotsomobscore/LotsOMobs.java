@@ -91,8 +91,9 @@ public class LotsOMobs
 	public void load(FMLInitializationEvent event)
 	{	     	
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		LotsOMobsBlocks.TELoad();
 		LotsOMobsMobs.Init();
-		LotsOMobsRecipes.RecipeBook();		
+		LotsOMobsRecipes.RecipeBook();	
      	
 		proxy.registerRenderInformation();
      	

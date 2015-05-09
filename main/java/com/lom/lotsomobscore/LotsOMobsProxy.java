@@ -1,5 +1,6 @@
 package com.lom.lotsomobscore;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.world.World;
 
@@ -26,6 +27,6 @@ public class LotsOMobsProxy
 
 		public World getClientWorld() {
 			// TODO Auto-generated method stub
-			return null;
+	        return FMLClientHandler.instance().getClient().theWorld;
 		}
 }

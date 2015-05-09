@@ -180,19 +180,14 @@ public class LotsOMobsBlocks
 		GameRegistry.registerBlock(Coral4, "Coral4");
 
 	    GameRegistry.registerBlock(DNAExtractor, "DNA Extractor");
-	    GameRegistry.registerTileEntity(TileEntityDNAExtractor.class, "DNAExtractorTE");
 	    
 	    GameRegistry.registerBlock(TanningRack, "TanningRack");
-	    GameRegistry.registerTileEntity(TileEntityTanningRack.class, "TanningRackTE");
 	    
 	    GameRegistry.registerBlock(SaltBath, "SaltBath");
-	    GameRegistry.registerTileEntity(TileEntitySaltBath.class, "SaltBathTE");
 	    
 	    GameRegistry.registerBlock(SpinningWheel, "SpinningWheel");
-	    GameRegistry.registerTileEntity(TileEntitySpinningWheel.class, "SpinningWheelTE");
 	    
 	    GameRegistry.registerBlock(Coconut, "Coconut");
-	    GameRegistry.registerTileEntity(TileEntityCoconut.class, "CoconutTE");
 
 		//Flowers
 		/*GameRegistry.registerBlock(OrangeFlower, "Orange Flower");
@@ -210,4 +205,13 @@ public class LotsOMobsBlocks
 		GameRegistry.registerBlock(EasterEgg4, "EasterEgg4");
 		GameRegistry.registerBlock(EasterEgg5, "EasterEgg5");
 }
+		public static void TELoad()
+		{
+		    GameRegistry.registerTileEntity(TileEntityDNAExtractor.class, "DNAExtractorTE");
+		    GameRegistry.registerTileEntity(TileEntityTanningRack.class, "TanningRackTE");
+		    GameRegistry.registerTileEntity(TileEntitySaltBath.class, "SaltBathTE");
+		    GameRegistry.registerTileEntity(TileEntitySpinningWheel.class, "SpinningWheelTE");
+		    GameRegistry.registerTileEntity(TileEntityCoconut.class, "CoconutTE");
+
+		}
 }

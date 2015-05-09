@@ -55,11 +55,13 @@ entity.lom_Mole.name=Mole
 entity.lom_Bison.name=Bison
 entity.lom_Crab.name=Crab
 entity.lom_Ammonite.name=Ammonite
+entity.lom_Shell.name=Hermit Crab
+entity.Shell.name=Hermit Crab
 
 //Items
 item.DeerFur.name=Deer Hide
 item.DeerFurDirty.name=Deer Hide (Dirty)
-item.DeerFurSalted.name=Deer Hide (Salted
+item.DeerFurSalted.name=Deer Hide (Salted)
 item.ElephantHide.name=Elephant Hide
 item.Horn.name=Horn
 item.Ivory.name=Ivory
