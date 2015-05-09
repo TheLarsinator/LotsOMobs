@@ -1,4 +1,4 @@
-package com.lom.lotsomobstileentity.tanningrack;
+package com.lom.lotsomobscore.handler;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFutureListener;
@@ -70,11 +70,12 @@ public enum PacketHandler
         {
             World world = LotsOMobs.proxy.getClientWorld();
             TileEntity te = world.getTileEntity(msg.x, msg.y, msg.z);
+            
             if (te instanceof TileEntitySaltBath)
             {
                 TileEntitySaltBath Lom = (TileEntitySaltBath) te;
 
-                Lom.setHasSalt(msg.hasSalt);
+                Lom.handlePacketData(((TileEntitySaltBathMessage)msg).hasSalt);
                 
                 System.out.println("Getting Called!");
             }

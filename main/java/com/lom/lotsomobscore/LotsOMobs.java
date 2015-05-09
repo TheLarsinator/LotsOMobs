@@ -11,6 +11,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobscore.handler.GuiHandler;
 import com.lom.lotsomobscore.handler.LotsOMobsEventHandler;
+import com.lom.lotsomobscore.handler.PacketHandler;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBiomes;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
@@ -20,7 +21,6 @@ import com.lom.lotsomobsinit.LotsOMobsRecipes;
 import com.lom.lotsomobstabs.MyBlockTab;
 import com.lom.lotsomobstabs.MyCombatTab;
 import com.lom.lotsomobstabs.MyItemsTab;
-import com.lom.lotsomobstileentity.tanningrack.PacketHandler;
 import com.lom.lotsomobsworldgen.FossilOreGeneration;
 import com.lom.lotsomobsworldgen.OreGeneration;
 import com.lom.lotsomobsworldgen.WorldGenRegister;
@@ -84,6 +84,7 @@ public class LotsOMobs
 	     if(ConfigHandler.newBiomes)
 	     GameRegistry.registerWorldGenerator(new WorldGenRegister(), 2);
 		// proxy.registerSound();
+	     PacketHandler.INSTANCE.ordinal();
 		}
 
 	@EventHandler
@@ -107,7 +108,6 @@ public class LotsOMobs
 
      	MinecraftForge.EVENT_BUS.register(new LotsOMobsEventHandler());
      	FMLCommonHandler.instance().bus().register(new LotsOMobsEventHandler());
-        PacketHandler.INSTANCE.ordinal();
 
 	}
 }

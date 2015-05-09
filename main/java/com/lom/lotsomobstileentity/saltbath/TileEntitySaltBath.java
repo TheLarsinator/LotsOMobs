@@ -7,7 +7,7 @@ import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fluids.FluidStack;
 
-import com.lom.lotsomobstileentity.tanningrack.PacketHandler;
+import com.lom.lotsomobscore.handler.PacketHandler;
 
 public class TileEntitySaltBath extends TileEntity
 {
@@ -33,4 +33,10 @@ public class TileEntitySaltBath extends TileEntity
     {
         return PacketHandler.getPacket(this);
     }
+    
+    public void handlePacketData(boolean salt)
+    {
+    	this.SaltContent = salt;
+    }
+
 }
