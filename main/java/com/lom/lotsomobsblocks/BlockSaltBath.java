@@ -84,8 +84,8 @@ public class BlockSaltBath extends Block implements ITileEntityProvider
 	    	    		EntityItem item = new EntityItem(world, x, y, z, new ItemStack(LotsOMobsItems.ElephantHideSalted));
 	    	    		world.spawnEntityInWorld(item);
 	    	    		player.inventory.consumeInventoryItem(LotsOMobsItems.ElephantHideDirty);
-	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
 	    	    	   }
+	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
 	        	   }
 	    	       else
 	    	       {
@@ -124,8 +124,8 @@ public class BlockSaltBath extends Block implements ITileEntityProvider
 	    	    		EntityItem item = new EntityItem(world, x, y, z, new ItemStack(LotsOMobsItems.DeerHideSalted));
 	    	    		world.spawnEntityInWorld(item);
 	    	    		player.inventory.consumeInventoryItem(LotsOMobsItems.DeerHideDirty);
-	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
 	    	    	   }
+	    		        ((TileEntitySaltBath)world.getTileEntity(x, y, z)).setHasSalt(false);
 	        	   }
 	    	       else
 	    	       {
