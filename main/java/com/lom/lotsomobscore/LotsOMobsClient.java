@@ -3,6 +3,7 @@ package com.lom.lotsomobscore;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelChicken;
 import net.minecraft.item.Item;
+import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.lom.lotsomobsentity.EntityAmmonite;
@@ -183,6 +184,7 @@ import com.lom.lotsomobstileentity.tanningrack.ItemRenderTanningRack;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityRendererTanningRack;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityTanningRack;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -293,5 +295,11 @@ public class LotsOMobsClient extends LotsOMobsProxy
     	break;
     	}
     	return Chest;
+    }
+    
+    @Override
+    public World getClientWorld()
+    {
+        return FMLClientHandler.instance().getClient().theWorld;
     }
 }

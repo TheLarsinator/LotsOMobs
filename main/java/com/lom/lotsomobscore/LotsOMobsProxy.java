@@ -1,6 +1,7 @@
 package com.lom.lotsomobscore;
 
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.world.World;
 
 public class LotsOMobsProxy
 {
@@ -20,6 +21,11 @@ public class LotsOMobsProxy
 		
 		public ModelBiped getArmorModel(int id)
 		{
+			return null;
+		}
+
+		public World getClientWorld() {
+			// TODO Auto-generated method stub
 			return null;
 		}
 }

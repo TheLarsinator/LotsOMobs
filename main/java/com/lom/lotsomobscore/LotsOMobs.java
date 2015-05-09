@@ -20,6 +20,7 @@ import com.lom.lotsomobsinit.LotsOMobsRecipes;
 import com.lom.lotsomobstabs.MyBlockTab;
 import com.lom.lotsomobstabs.MyCombatTab;
 import com.lom.lotsomobstabs.MyItemsTab;
+import com.lom.lotsomobstileentity.tanningrack.PacketHandler;
 import com.lom.lotsomobsworldgen.FossilOreGeneration;
 import com.lom.lotsomobsworldgen.OreGeneration;
 import com.lom.lotsomobsworldgen.WorldGenRegister;
@@ -106,5 +107,7 @@ public class LotsOMobs
 
      	MinecraftForge.EVENT_BUS.register(new LotsOMobsEventHandler());
      	FMLCommonHandler.instance().bus().register(new LotsOMobsEventHandler());
+        PacketHandler.INSTANCE.ordinal();
+
 	}
 }

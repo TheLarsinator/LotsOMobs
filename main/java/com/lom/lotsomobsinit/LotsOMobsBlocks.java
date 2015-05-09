@@ -194,7 +194,6 @@ public class LotsOMobsBlocks
 	    GameRegistry.registerBlock(Coconut, "Coconut");
 	    GameRegistry.registerTileEntity(TileEntityCoconut.class, "CoconutTE");
 
-
 		//Flowers
 		/*GameRegistry.registerBlock(OrangeFlower, "Orange Flower");
 		GameRegistry.registerBlock(Flowers, "Flowers");
