@@ -74,6 +74,7 @@ public class LotsOMobsBlocks
 		public static Block Coral2;
 		public static Block Coral3;
 		public static Block Coral4;
+		public static Block PermaFrost;
 		
 		public static BlockMyFlower OrangeFlower;
 		public static BlockMyFlower Flowers;
@@ -131,6 +132,8 @@ public class LotsOMobsBlocks
 		Coral3 = new BlockCoral(Material.water, 3).setHardness(0.1F).setBlockName("Coral3");
 		Coral4 = new BlockCoral(Material.water, 4).setHardness(0.1F).setBlockName("Coral4");
 		
+		PermaFrost = new BlockIceCobble(0, Material.sand).setHardness(1.0F).setBlockName("PermaFrost").setBlockTextureName("PermaFrost");
+		
 		//EasterEggs
 		EasterEgg1 = (new BlockEasterEgg().setBlockName("EasterEgg1").setHardness(0.5F).setResistance(0F));
 		EasterEgg2 = (new BlockEasterEgg().setBlockName("EasterEgg2").setHardness(0.5F).setResistance(0F));
@@ -178,6 +181,8 @@ public class LotsOMobsBlocks
 		GameRegistry.registerBlock(Coral2, "Coral2");
 		GameRegistry.registerBlock(Coral3, "Coral3");
 		GameRegistry.registerBlock(Coral4, "Coral4");
+		
+		GameRegistry.registerBlock(PermaFrost, "PermaFrost");
 
 	    GameRegistry.registerBlock(DNAExtractor, "DNA Extractor");
 	    

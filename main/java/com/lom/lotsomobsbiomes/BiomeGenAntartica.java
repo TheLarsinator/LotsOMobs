@@ -15,7 +15,7 @@ public class BiomeGenAntartica extends BiomeGenBase
         this.topBlock = Blocks.snow;
         this.fillerBlock = Blocks.ice;
         this.getEnableSnow();
-        this.setTemperatureRainfall(0.1F, 17F);       
+        this.setTemperatureRainfall(-0.1F, -17F);       
         this.spawnableMonsterList.clear();
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();

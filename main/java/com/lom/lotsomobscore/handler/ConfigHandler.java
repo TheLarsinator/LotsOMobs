@@ -144,6 +144,7 @@ public class ConfigHandler
 	
 	//Other Configs
 	public static int knifeDamage = 100;
+	public static int modEntityID = 1;
 	
 	public static void LoadFile(File configFile)
 	{

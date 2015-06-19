@@ -13,7 +13,9 @@ import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobscrops.ItemMyFoodSeed;
 import com.lom.lotsomobsitems.IceTimeTraveler;
 import com.lom.lotsomobsitems.Item3DArmor;
+import com.lom.lotsomobsitems.ItemAncientSpawner;
 import com.lom.lotsomobsitems.ItemCactiOnAStick;
+import com.lom.lotsomobsitems.ItemCreatureEgg;
 import com.lom.lotsomobsitems.ItemDNA;
 import com.lom.lotsomobsitems.ItemEasterCake;
 import com.lom.lotsomobsitems.ItemFlintAndFossil;
@@ -22,7 +24,6 @@ import com.lom.lotsomobsitems.ItemMaterials;
 import com.lom.lotsomobsitems.ItemMyAxe;
 import com.lom.lotsomobsitems.ItemMyPickaxe;
 import com.lom.lotsomobsitems.ItemMyShovel;
-import com.lom.lotsomobsitems.ItemAncientSpawner;
 import com.lom.lotsomobsitems.ItemTimeTraveler;
 import com.lom.lotsomobsitems.MyFood;
 
@@ -344,6 +345,13 @@ public class LotsOMobsItems
 		 EskimoLeggings = new ItemArmor(LotsOMobs.Eskimo, proxy.addArmor("EskimoArmor"), 2).setUnlocalizedName("EskimoLeggings").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":EskimoLeggings");;
 		 EskimoBoots = new ItemArmor(LotsOMobs.Eskimo, proxy.addArmor("EskimoArmor"), 3).setUnlocalizedName("EskimoBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":EskimoBoots");;
 		
+		 
+		 
+		 //The Eggs:
+			String mobid = "lom_";
+
+		 Item itemSpawnEgg = new ItemCreatureEgg(mobid + "Deer", 0x7D3B0C, 0xB37346).setUnlocalizedName("Egg_Deer");
+		 
 //Register Items
 		 GameRegistry.registerItem(DeerHide, "DeerFur", modid);
 		 GameRegistry.registerItem(DeerHideDirty, "DeerHideDirty", modid);

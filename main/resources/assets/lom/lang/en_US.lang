@@ -218,6 +218,7 @@ tile.Coral1.name=Coral
 tile.Coral2.name=Seaweed
 tile.Coral3.name=Coral
 tile.Coral4.name=Coral
+tile.PermaFrost.name=Permafrost
 
 
 tile.EasterEgg1.name=Easter Egg
@@ -232,6 +233,7 @@ tile.SpinningWheel.name=Spinning Wheel
 itemGroup.LotsOMobsItems=LotsOMobs Items
 itemGroup.LotsOMobsCombat=LotsOMobs Combat Items
 itemGroup.LotsOMobsBlock=LotsOMobs Blocks
+itemGroup.LotsOMobsEgg=LotsOMobs Spawn Eggs
 
 //Achievements
 achievement.login=Play LotsOMobs

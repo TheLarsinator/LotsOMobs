@@ -14,13 +14,14 @@ public class BiomeGenIceIslands extends BiomeGenBase
         this.waterColorMultiplier = -13395457;
         this.setHeight(height_PartiallySubmerged);
         this.spawnableCreatureList.clear();
-        this.topBlock = Blocks.snow;
-        this.fillerBlock = Blocks.ice;
+        this.topBlock = Blocks.dirt;
+        this.fillerBlock = LotsOMobsBlocks.PermaFrost;
         this.getEnableSnow();
-        this.setTemperatureRainfall(0.1F, 17F);       
+        this.setTemperatureRainfall(-0.1F, -17F);       
         this.spawnableMonsterList.clear();
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
+        System.out.println("Generate plox");
     }       
    
 }

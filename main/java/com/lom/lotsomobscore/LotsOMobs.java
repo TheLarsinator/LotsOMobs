@@ -11,7 +11,6 @@ import net.minecraftforge.common.util.EnumHelper;
 import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobscore.handler.GuiHandler;
 import com.lom.lotsomobscore.handler.LotsOMobsEventHandler;
-import com.lom.lotsomobscore.handler.PacketHandler;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBiomes;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
@@ -20,6 +19,7 @@ import com.lom.lotsomobsinit.LotsOMobsMobs;
 import com.lom.lotsomobsinit.LotsOMobsRecipes;
 import com.lom.lotsomobstabs.MyBlockTab;
 import com.lom.lotsomobstabs.MyCombatTab;
+import com.lom.lotsomobstabs.MyEggTab;
 import com.lom.lotsomobstabs.MyItemsTab;
 import com.lom.lotsomobsworldgen.FossilOreGeneration;
 import com.lom.lotsomobsworldgen.OreGeneration;
@@ -34,7 +34,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.0.4", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.1.1B", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais
@@ -66,6 +66,7 @@ public class LotsOMobs
 	public static CreativeTabs LotsOMobsItemsTab = new MyItemsTab(CreativeTabs.getNextID(),"LotsOMobsItems");
 	public static CreativeTabs LotsOMobsCombatTab = new MyCombatTab(CreativeTabs.getNextID(),"LotsOMobsCombat");
 	public static CreativeTabs LotsOMobsBlockTab = new MyBlockTab(CreativeTabs.getNextID(),"LotsOMobsBlock");
+	public static CreativeTabs LotsOMobsEggTab = new MyEggTab(CreativeTabs.getNextID(), "LotsOMobsEgg");
 	
 	//PreInit
 		@Mod.EventHandler
@@ -84,7 +85,6 @@ public class LotsOMobs
 	     if(ConfigHandler.newBiomes)
 	     GameRegistry.registerWorldGenerator(new WorldGenRegister(), 2);
 		// proxy.registerSound();
-	     PacketHandler.INSTANCE.ordinal();
 		}
 
 	@EventHandler

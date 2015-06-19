@@ -25,8 +25,8 @@ public class LotsOMobsProxy
 			return null;
 		}
 
-		public World getClientWorld() {
-			// TODO Auto-generated method stub
-	        return FMLClientHandler.instance().getClient().theWorld;
+		public World getClientWorld() 
+		{
+			return null;
 		}
 }
