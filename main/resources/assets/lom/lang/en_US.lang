@@ -194,6 +194,14 @@ item.IcemintuimChest.name=Icemintuim ChestPlate
 item.IcemintuimLeggings.name=Icemintuim Leggings
 item.IcemintuimBoots.name=Icemintuim Boots
 
+//SwimmingMasks
+item.SwimmingMaskO.name=Orange Swimming Goggles
+item.SwimmingMaskR.name=Red Swimming Goggles
+item.SwimmingMaskB.name=Blue Swimming Goggles
+item.SwimmingMaskG.name=Lime Swimming Goggles
+item.SwimmingMaskY.name=Yellow Swimming Goggles
+
+
 //Blocks
 tile.PineAppleBlock.name=Pineapple
 tile.TomatoBlock.name=Tomato

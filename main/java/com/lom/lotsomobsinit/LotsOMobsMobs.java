@@ -1,21 +1,12 @@
 package com.lom.lotsomobsinit;
 
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.item.Item;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.BiomeDictionary.Type;
-
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsentity.EntityAmmonite;
 import com.lom.lotsomobsentity.EntityAnt;
 import com.lom.lotsomobsentity.EntityBear;
 import com.lom.lotsomobsentity.EntityBee;
+import com.lom.lotsomobsentity.EntityBigFishy;
 import com.lom.lotsomobsentity.EntityBird;
 import com.lom.lotsomobsentity.EntityBison;
 import com.lom.lotsomobsentity.EntityBoar;
@@ -57,6 +48,7 @@ import com.lom.lotsomobsentity.EntityPterosaurus;
 import com.lom.lotsomobsentity.EntityRaptor;
 import com.lom.lotsomobsentity.EntitySaberTooth;
 import com.lom.lotsomobsentity.EntitySanta;
+import com.lom.lotsomobsentity.EntitySeaHorse;
 import com.lom.lotsomobsentity.EntityShark;
 import com.lom.lotsomobsentity.EntityShell;
 import com.lom.lotsomobsentity.EntitySnake;
@@ -73,6 +65,15 @@ import com.lom.lotsomobsitems.ItemCreatureEgg;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.passive.EntityHorse;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.item.Item;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
 
 public class LotsOMobsMobs 
 {
@@ -164,7 +165,7 @@ public class LotsOMobsMobs
 			        	 BiomeGenBase.ocean,
 			        	 BiomeGenBase.extremeHills,
 			        	 });
-			        EntityRegistry.addSpawn(EntityFishy.class, (int)ConfigHandler.FishyRate *10, 1, 4, EnumCreatureType.creature, BiomeDictionary.getBiomesForType(Type.OCEAN));
+			        EntityRegistry.addSpawn(EntityFishy.class, (int)ConfigHandler.FishyRate *10, 1, 4, EnumCreatureType.waterCreature, BiomeDictionary.getBiomesForType(Type.OCEAN));
 
 				}
 				if(ConfigHandler.WhaleOn == true)
@@ -513,6 +514,38 @@ public class LotsOMobsMobs
 			    	registerModEntityWithEgg(EntityAmmonite.class, mobid + "Ammonite", 0x8c6239, 0xec8c6f);
 					 if(ConfigHandler.newDimensions)
 						 EntityRegistry.addSpawn(EntityAmmonite.class, (int) ConfigHandler.AmmoniteRate * 10, 6, 9, EnumCreatureType.waterCreature, new BiomeGenBase[] {LotsOMobsBiomes.modBiomeDinoOcean});
+				}
+				if(ConfigHandler.FishyOn == true)
+				{    
+			        registerModEntityWithEgg(EntityBigFishy.class, mobid + "BigFishy", 0x085cae, 0x1ccbc2);
+			        EntityRegistry.addSpawn(EntityBigFishy.class, (int)ConfigHandler.FishyRate *20, 15, 30, EnumCreatureType.waterCreature, new BiomeGenBase[] { 
+			        	 BiomeGenBase.beach,
+			        	 BiomeGenBase.river,
+			        	 BiomeGenBase.ocean,
+			        	 LotsOMobsBiomes.modBiomeAntartica,
+			        	 LotsOMobsBiomes.modBiomeArcticOcean,
+			        	 LotsOMobsBiomes.modBiomeTropical,
+			        	 BiomeGenBase.deepOcean,
+			        	 BiomeGenBase.stoneBeach
+			        	 });
+			        EntityRegistry.addSpawn(EntityFishy.class, (int)ConfigHandler.FishyRate *10, 1, 4, EnumCreatureType.waterCreature, BiomeDictionary.getBiomesForType(Type.OCEAN));
+
+				}
+				if(ConfigHandler.FishyOn == true)
+				{    
+			        registerModEntityWithEgg(EntitySeaHorse.class, mobid + "SeaHorse", 0xf49ac1, 0xf06eaa);
+			        EntityRegistry.addSpawn(EntitySeaHorse.class, (int)ConfigHandler.FishyRate *8, 4, 6, EnumCreatureType.waterCreature, new BiomeGenBase[] { 
+			        	 BiomeGenBase.beach,
+			        	 BiomeGenBase.river,
+			        	 BiomeGenBase.ocean,
+			        	 LotsOMobsBiomes.modBiomeAntartica,
+			        	 LotsOMobsBiomes.modBiomeArcticOcean,
+			        	 LotsOMobsBiomes.modBiomeTropical,
+			        	 BiomeGenBase.deepOcean,
+			        	 BiomeGenBase.stoneBeach
+			        	 });
+			        EntityRegistry.addSpawn(EntitySeaHorse.class, (int)ConfigHandler.FishyRate *10, 1, 4, EnumCreatureType.waterCreature, BiomeDictionary.getBiomesForType(Type.OCEAN));
+
 				}
 				
 				

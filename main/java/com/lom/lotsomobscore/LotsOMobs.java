@@ -34,7 +34,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.1.2", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.2.0", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais
@@ -62,6 +62,8 @@ public class LotsOMobs
 	public static final ArmorMaterial Dino = EnumHelper.addArmorMaterial("Dino",  75, new int[] {3, 8, 6, 3}, 10);
 	public static final ArmorMaterial Eskimo = EnumHelper.addArmorMaterial("Eskimo",  8, new int[] {3, 5, 4, 4}, 20);
 	public static final ArmorMaterial IcemintuimA = EnumHelper.addArmorMaterial("Icemintuim", 90, new int[] {3, 6, 5, 3}, 12);
+	public static final ArmorMaterial SwimmingMask = EnumHelper.addArmorMaterial("swim",  0, new int[] {0, 0, 0, 0}, 0);
+
 //Tabs
 	public static CreativeTabs LotsOMobsItemsTab = new MyItemsTab(CreativeTabs.getNextID(),"LotsOMobsItems");
 	public static CreativeTabs LotsOMobsCombatTab = new MyCombatTab(CreativeTabs.getNextID(),"LotsOMobsCombat");

@@ -16,30 +16,45 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class Item3DArmor extends ItemArmor
+public class ItemSwimmingMask extends ItemArmor
 {
-
-	public Item3DArmor(ArmorMaterial armor, int par2, int par3) 
+	int color = 0;
+	public ItemSwimmingMask(ArmorMaterial armor, int par2, int par3, int colorid) 
 	{
 		super(armor, par2, par3);
+		color = colorid;
 	}
-    
+	
+    public void onUpdate(ItemStack itemstack, World par2World, Entity par3Entity, int par4, boolean par5)
+    {
+    	if(itemstack.isItemEnchanted() == false)
+    	{
+    		itemstack.addEnchantment(Enchantment.respiration, 2);
+    		itemstack.addEnchantment(Enchantment.aquaAffinity, 2);
+    	}
+    }
+    public boolean hasEffect(ItemStack par1ItemStack)
+    {
+    		return false;
+    }
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
-	String type) {
-	if (stack.getItem() == LotsOMobsItems.FurChestplate|| stack.getItem() == LotsOMobsItems.FurBoots || stack.getItem() == LotsOMobsItems.FurHelmet) 
+	String type) 
 	{
-	         return "lom:DeerArmor_1.png";
-	}
-	if (stack.getItem() == LotsOMobsItems.FurLeggings) 
-	{
-	         return "lom:DeerArmor_2.png";
-	}
-	if(stack.getItem() == LotsOMobsItems.ElephantHelmet)
-	{
-		return "lom:ElephantArmor.png";
-	}
-	return null;
+		switch(color)
+		{
+		default:
+		case 1:
+			return "lom:textures/swimmingmasks/Orange.png";
+		case 2:
+			return "lom:textures/swimmingmasks/Red.png";
+		case 3:
+			return "lom:textures/swimmingmasks/Blue.png";
+		case 4:
+			return "lom:textures/swimmingmasks/Green.png";
+		case 5:
+			return "lom:textures/swimmingmasks/Yellow.png";
+		}
 	}
 	
 	@Override
@@ -49,30 +64,12 @@ public class Item3DArmor extends ItemArmor
 		ModelBiped armorModel = null;
 		if(itemStack != null)
 		{
-		if(itemStack.getItem() instanceof Item3DArmor)
-		{
-			if(itemStack.getItem() == LotsOMobsItems.FurBoots || itemStack.getItem() == LotsOMobsItems.FurChestplate || itemStack.getItem() == LotsOMobsItems.FurHelmet || itemStack.getItem() == LotsOMobsItems.FurLeggings)
-			{
-			int type = ((ItemArmor)itemStack.getItem()).armorType;
-
-			if(type == 1 || type == 3)
-			{
-			armorModel = LotsOMobs.proxy.getArmorModel(0);
-			}
-			else
-			{
-			armorModel = LotsOMobs.proxy.getArmorModel(1);
-			}
-			}
-			if(itemStack.getItem() == LotsOMobsItems.ElephantHelmet)
-			{
-			armorModel = LotsOMobs.proxy.getArmorModel(2);
-			}
+			armorModel = LotsOMobs.proxy.getArmorModel(3);
 		}
-		if(armorModel != null){
-			
-			armorModel.bipedHead.showModel = armorSlot == 0;
-			armorModel.bipedHeadwear.showModel = armorSlot == 0;
+		if(armorModel != null)
+		{	
+			armorModel.bipedHead.showModel = true;
+			armorModel.bipedHeadwear.showModel = false;
 			armorModel.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;
 			armorModel.bipedRightArm.showModel = armorSlot == 1;
 			armorModel.bipedLeftArm.showModel = armorSlot == 1;
@@ -88,7 +85,6 @@ public class Item3DArmor extends ItemArmor
 			}
 			return armorModel;
 			}
-		}
 		return null;
 	}
 }

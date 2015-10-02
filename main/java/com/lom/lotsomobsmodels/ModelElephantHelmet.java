@@ -27,7 +27,7 @@ public class ModelElephantHelmet extends ModelBiped
   
   public ModelElephantHelmet(float f)
   {
-	  super(f, 0, 64, 64);
+	super(f, 0, 64, 64);
     textureWidth = 64;
     textureHeight = 64;
     

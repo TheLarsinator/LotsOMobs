@@ -1,11 +1,6 @@
 package com.lom.lotsomobsinit;
 
 import static com.lom.lotsomobscore.LotsOMobs.modid;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemSword;
 
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscore.LotsOMobsProxy;
@@ -24,11 +19,17 @@ import com.lom.lotsomobsitems.ItemMaterials;
 import com.lom.lotsomobsitems.ItemMyAxe;
 import com.lom.lotsomobsitems.ItemMyPickaxe;
 import com.lom.lotsomobsitems.ItemMyShovel;
+import com.lom.lotsomobsitems.ItemSwimmingMask;
 import com.lom.lotsomobsitems.ItemTimeTraveler;
 import com.lom.lotsomobsitems.MyFood;
 
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemSword;
 
 public class LotsOMobsItems 
 {
@@ -132,6 +133,12 @@ public class LotsOMobsItems
 		public static Item ElephantChestplate;
 		public static Item ElephantLeggings;
 		public static Item ElephantBoots;
+		
+		public static Item SwimmingMaskO;
+		public static Item SwimmingMaskR;
+		public static Item SwimmingMaskB;
+		public static Item SwimmingMaskG;
+		public static Item SwimmingMaskY;
 		//Christmas Special
 		public static Item SantaHelmet;
 		public static Item SantaChestplate;
@@ -313,6 +320,12 @@ public class LotsOMobsItems
 		 ElephantLeggings = new ItemArmor(LotsOMobs.Elephant, proxy.addArmor("ElephantArmor"), 2).setUnlocalizedName("ElephantLegging").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":ElephantLegging");
 		 ElephantBoots = new ItemArmor(LotsOMobs.Elephant, proxy.addArmor("ElephantArmor"), 3).setUnlocalizedName("ElephantBoots").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":ElephantBoots");
 		 
+		 SwimmingMaskO = new ItemSwimmingMask(LotsOMobs.SwimmingMask, proxy.addArmor("SwimmingMask"), 0, 1).setUnlocalizedName("SwimmingMaskO").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SwimmingMaskO");;
+		 SwimmingMaskR = new ItemSwimmingMask(LotsOMobs.SwimmingMask, proxy.addArmor("SwimmingMask"), 0, 2).setUnlocalizedName("SwimmingMaskR").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SwimmingMaskR");;
+		 SwimmingMaskB = new ItemSwimmingMask(LotsOMobs.SwimmingMask, proxy.addArmor("SwimmingMask"), 0, 3).setUnlocalizedName("SwimmingMaskB").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SwimmingMaskB");;
+		 SwimmingMaskG = new ItemSwimmingMask(LotsOMobs.SwimmingMask, proxy.addArmor("SwimmingMask"), 0, 4).setUnlocalizedName("SwimmingMaskG").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SwimmingMaskG");;
+		 SwimmingMaskY = new ItemSwimmingMask(LotsOMobs.SwimmingMask, proxy.addArmor("SwimmingMask"), 0, 5).setUnlocalizedName("SwimmingMaskY").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SwimmingMaskY");;
+
 		 //Christmas Special
 		 SantaHelmet = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 0).setUnlocalizedName("SantaHelmet").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaHelmet");
 		 SantaChestplate = new ItemArmor(LotsOMobs.Santa, proxy.addArmor("SantaArmor"), 1).setUnlocalizedName("SantaChest").setCreativeTab(LotsOMobs.LotsOMobsCombatTab).setTextureName(modid + ":SantaChest");
@@ -466,7 +479,12 @@ public class LotsOMobsItems
 		 GameRegistry.registerItem(ElephantChestplate, "ElephantChestplate", modid);
 		 GameRegistry.registerItem(ElephantLeggings, "ElephantLeggings", modid);
 		 GameRegistry.registerItem(ElephantBoots, "ElephantBoots", modid);
-		 
+		 GameRegistry.registerItem(SwimmingMaskO, "SwimmingMask_ORANGE", modid);
+		 GameRegistry.registerItem(SwimmingMaskR, "SwimmingMask_RED", modid);
+		 GameRegistry.registerItem(SwimmingMaskB, "SwimmingMask_BLUE", modid);
+		 GameRegistry.registerItem(SwimmingMaskG, "SwimmingMask_GREEN", modid);
+		 GameRegistry.registerItem(SwimmingMaskY, "SwimmingMask_YELLOW", modid);
+
 		 GameRegistry.registerItem(SantaHelmet, "SantaHelmet", modid);
 		 GameRegistry.registerItem(SantaChestplate, "SantaChestplate", modid);
 		 GameRegistry.registerItem(SantaLeggings, "SantaLeggings", modid);

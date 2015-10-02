@@ -1,15 +1,10 @@
 package com.lom.lotsomobscore;
 
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.model.ModelChicken;
-import net.minecraft.item.Item;
-import net.minecraft.world.World;
-import net.minecraftforge.client.MinecraftForgeClient;
-
 import com.lom.lotsomobsentity.EntityAmmonite;
 import com.lom.lotsomobsentity.EntityAnt;
 import com.lom.lotsomobsentity.EntityBear;
 import com.lom.lotsomobsentity.EntityBee;
+import com.lom.lotsomobsentity.EntityBigFishy;
 import com.lom.lotsomobsentity.EntityBird;
 import com.lom.lotsomobsentity.EntityBison;
 import com.lom.lotsomobsentity.EntityBoar;
@@ -51,6 +46,7 @@ import com.lom.lotsomobsentity.EntityPterosaurus;
 import com.lom.lotsomobsentity.EntityRaptor;
 import com.lom.lotsomobsentity.EntitySaberTooth;
 import com.lom.lotsomobsentity.EntitySanta;
+import com.lom.lotsomobsentity.EntitySeaHorse;
 import com.lom.lotsomobsentity.EntityShark;
 import com.lom.lotsomobsentity.EntityShell;
 import com.lom.lotsomobsentity.EntitySnake;
@@ -67,6 +63,7 @@ import com.lom.lotsomobsinit.LotsOMobsBlocks;
 import com.lom.lotsomobsmodels.ModelAmmonite;
 import com.lom.lotsomobsmodels.ModelAnt;
 import com.lom.lotsomobsmodels.ModelBear;
+import com.lom.lotsomobsmodels.ModelBigFish;
 import com.lom.lotsomobsmodels.ModelBird;
 import com.lom.lotsomobsmodels.ModelBison;
 import com.lom.lotsomobsmodels.ModelBoar;
@@ -104,6 +101,7 @@ import com.lom.lotsomobsmodels.ModelPterosaurus;
 import com.lom.lotsomobsmodels.ModelRaptor;
 import com.lom.lotsomobsmodels.ModelSaberTooth;
 import com.lom.lotsomobsmodels.ModelSanta;
+import com.lom.lotsomobsmodels.ModelSeaHorse;
 import com.lom.lotsomobsmodels.ModelShark;
 import com.lom.lotsomobsmodels.ModelShell;
 import com.lom.lotsomobsmodels.ModelSnake;
@@ -114,10 +112,12 @@ import com.lom.lotsomobsmodels.ModelTurtle;
 import com.lom.lotsomobsmodels.ModelVulture;
 import com.lom.lotsomobsmodels.ModelWhale;
 import com.lom.lotsomobsmodels.ModelWorm;
+import com.lom.lotsomobsmodels.SwimmingMask;
 import com.lom.lotsomobsrender.RenderAmmonite;
 import com.lom.lotsomobsrender.RenderAnt;
 import com.lom.lotsomobsrender.RenderBear;
 import com.lom.lotsomobsrender.RenderBee;
+import com.lom.lotsomobsrender.RenderBigFish;
 import com.lom.lotsomobsrender.RenderBird;
 import com.lom.lotsomobsrender.RenderBison;
 import com.lom.lotsomobsrender.RenderBoar;
@@ -159,6 +159,7 @@ import com.lom.lotsomobsrender.RenderPterosaurus;
 import com.lom.lotsomobsrender.RenderRaptor;
 import com.lom.lotsomobsrender.RenderSaberTooth;
 import com.lom.lotsomobsrender.RenderSanta;
+import com.lom.lotsomobsrender.RenderSeaHorse;
 import com.lom.lotsomobsrender.RenderShark;
 import com.lom.lotsomobsrender.RenderShell;
 import com.lom.lotsomobsrender.RenderSnake;
@@ -184,11 +185,14 @@ import com.lom.lotsomobstileentity.tanningrack.ItemRenderTanningRack;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityRendererTanningRack;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityTanningRack;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.model.ModelChicken;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.MinecraftForgeClient;
 
 
 public class LotsOMobsClient extends LotsOMobsProxy
@@ -197,6 +201,7 @@ public class LotsOMobsClient extends LotsOMobsProxy
     private static final ModelDeerArmor Chest = new ModelDeerArmor(0.5F);
     private static final ModelDeerArmor Legs = new ModelDeerArmor(0.5F);
     private static final ModelElephantHelmet HelmetE = new ModelElephantHelmet(0.5F);
+    private static final SwimmingMask SwimmingMask = new SwimmingMask(0.5F);
 	
     @SideOnly(Side.CLIENT)
 	public void registerRenderInformation()
@@ -259,6 +264,8 @@ public class LotsOMobsClient extends LotsOMobsProxy
   		RenderingRegistry.registerEntityRenderingHandler(EntityDirtPile.class, new RenderDirtPile(new ModelDirtPile(), 0.2F));
   		RenderingRegistry.registerEntityRenderingHandler(EntityBison.class, new RenderBison(new ModelBison(), 1F));
   		RenderingRegistry.registerEntityRenderingHandler(EntityAmmonite.class, new RenderAmmonite(new ModelAmmonite(), 1F));
+  		RenderingRegistry.registerEntityRenderingHandler(EntityBigFishy.class, new RenderBigFish(new ModelBigFish(), 0F));
+  		RenderingRegistry.registerEntityRenderingHandler(EntitySeaHorse.class, new RenderSeaHorse(new ModelSeaHorse(), 0F));
  
   		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTanningRack.class, new TileEntityRendererTanningRack());
   		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(LotsOMobsBlocks.TanningRack), (new ItemRenderTanningRack()));
@@ -291,6 +298,8 @@ public class LotsOMobsClient extends LotsOMobsProxy
     	return Legs;
     	case 2:
     	return HelmetE;
+    	case 3:
+    	return SwimmingMask;
     	default:
     	break;
     	}
