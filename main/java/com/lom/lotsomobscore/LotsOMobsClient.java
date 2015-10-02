@@ -296,10 +296,4 @@ public class LotsOMobsClient extends LotsOMobsProxy
     	}
     	return Chest;
     }
-    
-    @Override
-    public World getClientWorld()
-    {
-        return FMLClientHandler.instance().getClient().theWorld;
-    }
 }

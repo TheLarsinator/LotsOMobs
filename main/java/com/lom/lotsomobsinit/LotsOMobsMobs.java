@@ -77,6 +77,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class LotsOMobsMobs 
 {
 	protected static int modEntityID = 0;
+	public static Item itemSpawnEgg;
 
 	public static void Init()
 	{
@@ -521,7 +522,7 @@ public class LotsOMobsMobs
     // name passed must match entity name string
     public static void registerSpawnEgg(String parSpawnName, int parEggColor, int parEggSpotsColor)
     {
-      Item itemSpawnEgg = new ItemCreatureEgg(parSpawnName, parEggColor, parEggSpotsColor).setUnlocalizedName("spawn_egg_"+parSpawnName.toLowerCase()).setTextureName("lom:spawn_egg").setCreativeTab(LotsOMobs.LotsOMobsEggTab);
+      itemSpawnEgg = new ItemCreatureEgg(parSpawnName, parEggColor, parEggSpotsColor).setUnlocalizedName("spawn_egg_"+parSpawnName.toLowerCase()).setTextureName("lom:spawn_egg").setCreativeTab(LotsOMobs.LotsOMobsEggTab);
       GameRegistry.registerItem(itemSpawnEgg, "spawnEgg"+parSpawnName);
     }
     

@@ -24,9 +24,4 @@ public class LotsOMobsProxy
 		{
 			return null;
 		}
-
-		public World getClientWorld() 
-		{
-			return null;
-		}
 }
