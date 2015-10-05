@@ -34,7 +34,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.2.0", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-3.2.1", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais
@@ -81,12 +81,10 @@ public class LotsOMobs
 	     LotsOMobsBiomes.Init();
 	     LotsOMobsAchievementsBook.Init();
 
-	     GameRegistry.registerWorldGenerator(new FossilOreGeneration(), 2);
-	     if(ConfigHandler.newDimensions)
-	     GameRegistry.registerWorldGenerator(new OreGeneration(), 2);
-	     if(ConfigHandler.newBiomes)
-	     GameRegistry.registerWorldGenerator(new WorldGenRegister(), 2);
-		// proxy.registerSound();
+	    // GameRegistry.registerWorldGenerator(new FossilOreGeneration(), 2);
+	     //if(ConfigHandler.newDimensions)
+	    // GameRegistry.registerWorldGenerator(new OreGeneration(), 2);
+	     //if(ConfigHandler.newBiomes)
 		}
 
 	@EventHandler
@@ -99,18 +97,21 @@ public class LotsOMobs
      	
 		proxy.registerRenderInformation();
      	
-     	ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 50));
-     	ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 50));
-     	ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 50));
-     	ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 50));
+     	ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 7));
+     	ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 5));
+     	ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 2));
+     	ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(LotsOMobsItems.PineApple, 0, 1, 4, 1));
      	
-     	ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 50));
-     	ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 50));
-     	ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 50));
-     	ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 50));     	
+     	ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 5));
+     	ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 10));
+     	ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 4));
+     	ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(LotsOMobsItems.Tomato, 0, 1, 4, 7));     	
 
      	MinecraftForge.EVENT_BUS.register(new LotsOMobsEventHandler());
      	FMLCommonHandler.instance().bus().register(new LotsOMobsEventHandler());
+     	
+	     GameRegistry.registerWorldGenerator(new WorldGenRegister(), 2);
+
 
 	}
 }

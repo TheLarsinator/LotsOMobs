@@ -19,22 +19,13 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemSwimmingMask extends ItemArmor
+public class ItemOTank extends ItemArmor
 {
-	int color = 0;
-	public ItemSwimmingMask(ArmorMaterial armor, int par2, int par3, int colorid) 
+	public ItemOTank(ArmorMaterial armor, int par2, int par3) 
 	{
 		super(armor, par2, par3);
-		color = colorid;
 	}
-	
-    public void onUpdate(ItemStack itemstack, World par2World, Entity par3Entity, int par4, boolean par5)
-    {
-    	if(itemstack.isItemEnchanted() == false)
-    	{
-    		itemstack.addEnchantment(Enchantment.respiration, 2);
-    	}
-    }
+
     public boolean hasEffect(ItemStack par1ItemStack)
     {
     		return false;
@@ -43,31 +34,21 @@ public class ItemSwimmingMask extends ItemArmor
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack armor) 
     {
-    	if(player.isInWater() && world.getBlock((int)player.posX, (int)player.posY + 2, (int)player.posZ) == Blocks.air)
-    	player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 5, 4));
-    	if(player.isInWater() && world.getBlock((int)player.posX, (int)player.posY + 1, (int)player.posZ) == Blocks.water)
+    	if(player.getEquipmentInSlot(4) != null)
     	{
-    		player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 5, 4));
+    	if(player.isInWater() && player.getEquipmentInSlot(4).getItem() == LotsOMobsItems.DivingHelmet && world.getBlock((int)player.posX, (int)player.posY +1, (int)player.posZ) == Blocks.water)
+    	{
+    		player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 5, 4));
     	}
+    	}
+
     }
+    
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 	String type) 
 	{
-		switch(color)
-		{
-		default:
-		case 1:
-			return "lom:textures/swimmingmasks/Orange.png";
-		case 2:
-			return "lom:textures/swimmingmasks/Red.png";
-		case 3:
-			return "lom:textures/swimmingmasks/Blue.png";
-		case 4:
-			return "lom:textures/swimmingmasks/Green.png";
-		case 5:
-			return "lom:textures/swimmingmasks/Yellow.png";
-		}
+			return "lom:textures/swimmingmasks/OTank.png";
 	}
 	
 	@Override
@@ -77,12 +58,12 @@ public class ItemSwimmingMask extends ItemArmor
 		ModelBiped armorModel = null;
 		if(itemStack != null)
 		{
-			armorModel = LotsOMobs.proxy.getArmorModel(3);
+			armorModel = LotsOMobs.proxy.getArmorModel(4);
 		}
 		if(armorModel != null)
 		{	
-			armorModel.bipedHead.showModel = true;
-			armorModel.bipedHeadwear.showModel = false;
+			armorModel.bipedHead.showModel = armorSlot == 0;
+			armorModel.bipedHeadwear.showModel = armorSlot == 0;
 			armorModel.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;
 			armorModel.bipedRightArm.showModel = armorSlot == 1;
 			armorModel.bipedLeftArm.showModel = armorSlot == 1;

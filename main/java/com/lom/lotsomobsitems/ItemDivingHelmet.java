@@ -19,13 +19,11 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemSwimmingMask extends ItemArmor
+public class ItemDivingHelmet extends ItemArmor
 {
-	int color = 0;
-	public ItemSwimmingMask(ArmorMaterial armor, int par2, int par3, int colorid) 
+	public ItemDivingHelmet(ArmorMaterial armor, int par2, int par3) 
 	{
 		super(armor, par2, par3);
-		color = colorid;
 	}
 	
     public void onUpdate(ItemStack itemstack, World par2World, Entity par3Entity, int par4, boolean par5)
@@ -43,8 +41,13 @@ public class ItemSwimmingMask extends ItemArmor
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack armor) 
     {
-    	if(player.isInWater() && world.getBlock((int)player.posX, (int)player.posY + 2, (int)player.posZ) == Blocks.air)
+    	/*if(player.isInWater() && player.getEquipmentInSlot(3) == new ItemStack(LotsOMobsItems.OTank, 1))
+    	{
+    		System.out.println("Yes");
     	player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 5, 4));
+    	}
+    	//System.out.println(new ItemStack(LotsOMobsItems.OTank, 1));
+    	//System.out.println(player.getEquipmentInSlot(3));*/
     	if(player.isInWater() && world.getBlock((int)player.posX, (int)player.posY + 1, (int)player.posZ) == Blocks.water)
     	{
     		player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 5, 4));
@@ -54,20 +57,7 @@ public class ItemSwimmingMask extends ItemArmor
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 	String type) 
 	{
-		switch(color)
-		{
-		default:
-		case 1:
-			return "lom:textures/swimmingmasks/Orange.png";
-		case 2:
-			return "lom:textures/swimmingmasks/Red.png";
-		case 3:
-			return "lom:textures/swimmingmasks/Blue.png";
-		case 4:
-			return "lom:textures/swimmingmasks/Green.png";
-		case 5:
-			return "lom:textures/swimmingmasks/Yellow.png";
-		}
+			return "lom:textures/swimmingmasks/DivingHelmet.png";
 	}
 	
 	@Override
@@ -77,12 +67,12 @@ public class ItemSwimmingMask extends ItemArmor
 		ModelBiped armorModel = null;
 		if(itemStack != null)
 		{
-			armorModel = LotsOMobs.proxy.getArmorModel(3);
+			armorModel = LotsOMobs.proxy.getArmorModel(5);
 		}
 		if(armorModel != null)
 		{	
-			armorModel.bipedHead.showModel = true;
-			armorModel.bipedHeadwear.showModel = false;
+			armorModel.bipedHead.showModel = armorSlot == 0;
+			armorModel.bipedHeadwear.showModel = armorSlot == 0;
 			armorModel.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;
 			armorModel.bipedRightArm.showModel = armorSlot == 1;
 			armorModel.bipedLeftArm.showModel = armorSlot == 1;

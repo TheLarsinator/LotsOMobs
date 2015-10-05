@@ -76,10 +76,12 @@ import com.lom.lotsomobsmodels.ModelCrab;
 import com.lom.lotsomobsmodels.ModelDeer;
 import com.lom.lotsomobsmodels.ModelDeerArmor;
 import com.lom.lotsomobsmodels.ModelDirtPile;
+import com.lom.lotsomobsmodels.ModelDivingHelmet;
 import com.lom.lotsomobsmodels.ModelEasterBunny;
 import com.lom.lotsomobsmodels.ModelElephant;
 import com.lom.lotsomobsmodels.ModelElephantHelmet;
 import com.lom.lotsomobsmodels.ModelFishy;
+import com.lom.lotsomobsmodels.ModelFlippers;
 import com.lom.lotsomobsmodels.ModelFly;
 import com.lom.lotsomobsmodels.ModelFrog;
 import com.lom.lotsomobsmodels.ModelGazelle;
@@ -96,6 +98,7 @@ import com.lom.lotsomobsmodels.ModelMammoth;
 import com.lom.lotsomobsmodels.ModelMole;
 import com.lom.lotsomobsmodels.ModelMuskOx;
 import com.lom.lotsomobsmodels.ModelNarwal;
+import com.lom.lotsomobsmodels.ModelOTank;
 import com.lom.lotsomobsmodels.ModelPenguin;
 import com.lom.lotsomobsmodels.ModelPterosaurus;
 import com.lom.lotsomobsmodels.ModelRaptor;
@@ -184,6 +187,12 @@ import com.lom.lotsomobstileentity.spinningwheel.TileEntitySpinningWheel;
 import com.lom.lotsomobstileentity.tanningrack.ItemRenderTanningRack;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityRendererTanningRack;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityTanningRack;
+import com.lom.lotsomobstileentity.undersea.starfish.ItemRenderStarfish;
+import com.lom.lotsomobstileentity.undersea.starfish.TileEntityRendererStarfish;
+import com.lom.lotsomobstileentity.undersea.starfish.TileEntityStarfish;
+import com.lom.lotsomobstileentity.undersea.urchin.ItemRenderSeaUrchin;
+import com.lom.lotsomobstileentity.undersea.urchin.TileEntityRendererSeaUrchin;
+import com.lom.lotsomobstileentity.undersea.urchin.TileEntitySeaUrchin;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -202,6 +211,9 @@ public class LotsOMobsClient extends LotsOMobsProxy
     private static final ModelDeerArmor Legs = new ModelDeerArmor(0.5F);
     private static final ModelElephantHelmet HelmetE = new ModelElephantHelmet(0.5F);
     private static final SwimmingMask SwimmingMask = new SwimmingMask(0.5F);
+    private static final ModelOTank OTank = new ModelOTank(0.5F);
+    private static final ModelDivingHelmet DivingHelmet = new ModelDivingHelmet(0.5F);
+    private static final ModelFlippers Flippers = new ModelFlippers(0.5F);
 	
     @SideOnly(Side.CLIENT)
 	public void registerRenderInformation()
@@ -278,6 +290,12 @@ public class LotsOMobsClient extends LotsOMobsProxy
 
   		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCoconut.class, new TileEntityRendererCoconut());
   		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(LotsOMobsBlocks.Coconut), (new ItemRenderCoconut()));
+  		
+  		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySeaUrchin.class, new TileEntityRendererSeaUrchin());
+  		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(LotsOMobsBlocks.SeaUrchin), (new ItemRenderSeaUrchin()));
+  		
+  		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityStarfish.class, new TileEntityRendererStarfish());
+  		//MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(LotsOMobsBlocks.Starfish), (new ItemRenderStarfish()));
 
         }
     /*
@@ -300,6 +318,12 @@ public class LotsOMobsClient extends LotsOMobsProxy
     	return HelmetE;
     	case 3:
     	return SwimmingMask;
+    	case 4:
+    		return OTank;
+    	case 5:
+    		return DivingHelmet;
+    	case 6:
+    		return Flippers;
     	default:
     	break;
     	}

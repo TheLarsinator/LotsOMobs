@@ -75,7 +75,6 @@ public class RenderBigFish extends RenderLiving
     {
     	float f = 1 + par1EntityBigFishy.scaleAmount();
         GL11.glScalef(f, f, f);
-        //System.out.println("Scale: " + f);
     }
     
     protected void preRenderCallback(EntityLivingBase par1EntityLivingBase, float par2)

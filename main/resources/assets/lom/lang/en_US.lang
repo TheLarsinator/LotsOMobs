@@ -201,6 +201,13 @@ item.SwimmingMaskB.name=Blue Swimming Goggles
 item.SwimmingMaskG.name=Lime Swimming Goggles
 item.SwimmingMaskY.name=Yellow Swimming Goggles
 
+item.DivingHelmet.name=Diving Helmet
+item.OTank.name=Oxygen Tank
+item.FlippersO.name=Orange Flippers
+item.FlippersR.name=Red Flippers
+item.FlippersG.name=Lime Flippers
+item.FlippersB.name=Blue Flippers
+item.FlippersY.name=Yellow Flippers
 
 //Blocks
 tile.PineAppleBlock.name=Pineapple

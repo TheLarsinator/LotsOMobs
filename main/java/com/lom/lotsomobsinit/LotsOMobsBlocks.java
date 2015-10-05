@@ -1,8 +1,5 @@
 package com.lom.lotsomobsinit;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-
 import com.lom.lotsomobsblocks.BlockAmberOre;
 import com.lom.lotsomobsblocks.BlockAncientFire;
 import com.lom.lotsomobsblocks.BlockCoconut;
@@ -26,7 +23,10 @@ import com.lom.lotsomobsblocks.BlockPalmLeaves;
 import com.lom.lotsomobsblocks.BlockPalmLog;
 import com.lom.lotsomobsblocks.BlockSaltBath;
 import com.lom.lotsomobsblocks.BlockSaltOre;
+import com.lom.lotsomobsblocks.BlockSeaUrchin;
+import com.lom.lotsomobsblocks.BlockSeaWeed;
 import com.lom.lotsomobsblocks.BlockSpinningWheel;
+import com.lom.lotsomobsblocks.BlockStarfish;
 import com.lom.lotsomobsblocks.BlockTanningRack;
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscore.handler.ConfigHandler;
@@ -38,8 +38,12 @@ import com.lom.lotsomobstileentity.coconut.TileEntityCoconut;
 import com.lom.lotsomobstileentity.saltbath.TileEntitySaltBath;
 import com.lom.lotsomobstileentity.spinningwheel.TileEntitySpinningWheel;
 import com.lom.lotsomobstileentity.tanningrack.TileEntityTanningRack;
+import com.lom.lotsomobstileentity.undersea.starfish.TileEntityStarfish;
+import com.lom.lotsomobstileentity.undersea.urchin.TileEntitySeaUrchin;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 public class LotsOMobsBlocks 
 {
@@ -74,6 +78,9 @@ public class LotsOMobsBlocks
 		public static Block Coral2;
 		public static Block Coral3;
 		public static Block Coral4;
+		public static Block SeaweedTop;
+		public static Block Seaweed;
+		public static Block Kelp;
 		public static Block PermaFrost;
 		
 		public static BlockMyFlower OrangeFlower;
@@ -94,6 +101,10 @@ public class LotsOMobsBlocks
 		public static Block TanningRack;
 		public static Block SaltBath;
 		public static Block SpinningWheel;
+		
+		public static Block SeaUrchin;
+		public static Block Starfish;
+		public static Block MusselRock;
 
 		public static void Init()
 		{
@@ -131,6 +142,9 @@ public class LotsOMobsBlocks
 		Coral2 = new BlockCoral(Material.water, 2).setHardness(0.1F).setBlockName("Coral2");
 		Coral3 = new BlockCoral(Material.water, 3).setHardness(0.1F).setBlockName("Coral3");
 		Coral4 = new BlockCoral(Material.water, 4).setHardness(0.1F).setBlockName("Coral4");
+		SeaweedTop = new BlockSeaWeed(Material.water).setHardness(0.1F).setBlockName("SeaweedTop");
+		Seaweed = new BlockSeaWeed(Material.water).setHardness(0.1F).setBlockName("Seaweed");
+		Kelp = new BlockSeaWeed(Material.water).setHardness(0.1F).setBlockName("Kelp");
 		
 		PermaFrost = new BlockIceCobble(0, Material.sand).setHardness(1.0F).setBlockName("PermaFrost").setBlockTextureName("PermaFrost");
 		
@@ -147,6 +161,8 @@ public class LotsOMobsBlocks
 		SpinningWheel = new BlockSpinningWheel(Material.wood).setBlockName("SpinningWheel").setHardness(0.5F).setResistance(0F).setBlockTextureName("lom:Wood");
 		
 		Coconut = new BlockCoconut(Material.wood).setBlockName("Coconut").setHardness(0.5F).setResistance(0F).setBlockTextureName("lom:Coconut");
+		SeaUrchin = new BlockSeaUrchin().setBlockName("SeaUrchin").setHardness(0.5F).setResistance(0F).setBlockTextureName("lom:SeaUrchin");
+		Starfish = new BlockStarfish().setBlockName("Starfish").setHardness(0.5F).setResistance(0F).setBlockTextureName("lom:Starfish");
 		
 		//Register Blocks
 		GameRegistry.registerBlock(PineAppleBlock, "PineAppleBlock");
@@ -181,6 +197,9 @@ public class LotsOMobsBlocks
 		GameRegistry.registerBlock(Coral2, "Coral2");
 		GameRegistry.registerBlock(Coral3, "Coral3");
 		GameRegistry.registerBlock(Coral4, "Coral4");
+		GameRegistry.registerBlock(Seaweed, "Seaweed");
+		GameRegistry.registerBlock(SeaweedTop, "SeaweedTop");
+		GameRegistry.registerBlock(Kelp, "Kelp");
 		
 		GameRegistry.registerBlock(PermaFrost, "PermaFrost");
 
@@ -193,6 +212,8 @@ public class LotsOMobsBlocks
 	    GameRegistry.registerBlock(SpinningWheel, "SpinningWheel");
 	    
 	    GameRegistry.registerBlock(Coconut, "Coconut");
+	    GameRegistry.registerBlock(SeaUrchin, "SeaUrchin");
+	    GameRegistry.registerBlock(Starfish, "Starfish");
 
 		//Flowers
 		/*GameRegistry.registerBlock(OrangeFlower, "Orange Flower");
@@ -217,6 +238,8 @@ public class LotsOMobsBlocks
 		    GameRegistry.registerTileEntity(TileEntitySaltBath.class, "SaltBathTE");
 		    GameRegistry.registerTileEntity(TileEntitySpinningWheel.class, "SpinningWheelTE");
 		    GameRegistry.registerTileEntity(TileEntityCoconut.class, "CoconutTE");
+		    GameRegistry.registerTileEntity(TileEntitySeaUrchin.class, "SeaUrchinTE");
+		    GameRegistry.registerTileEntity(TileEntityStarfish.class, "StarfishTE");
 
 		}
 }

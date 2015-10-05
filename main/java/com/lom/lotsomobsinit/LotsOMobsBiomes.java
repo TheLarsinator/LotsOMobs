@@ -1,12 +1,5 @@
 package com.lom.lotsomobsinit;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.BiomeDictionary.Type;
-import net.minecraftforge.common.BiomeManager;
-import net.minecraftforge.common.BiomeManager.BiomeEntry;
-import net.minecraftforge.common.DimensionManager;
-
 import com.lom.lotsomobsbiomes.BiomeGenAntartica;
 import com.lom.lotsomobsbiomes.BiomeGenArcticOcean;
 import com.lom.lotsomobsbiomes.BiomeGenDinoIslands;
@@ -18,10 +11,18 @@ import com.lom.lotsomobsbiomes.BiomeGenIceIslands;
 import com.lom.lotsomobsbiomes.BiomeGenIceMountains;
 import com.lom.lotsomobsbiomes.BiomeGenIceOcean;
 import com.lom.lotsomobsbiomes.BiomeGenIcePlains;
+import com.lom.lotsomobsbiomes.BiomeGenOceanForrest;
 import com.lom.lotsomobsbiomes.BiomeGenTropical;
 import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsdino.WorldProviderDino;
 import com.lom.lotsomobsiceage.WorldProviderIceAge;
+
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
+import net.minecraftforge.common.BiomeManager;
+import net.minecraftforge.common.BiomeManager.BiomeEntry;
+import net.minecraftforge.common.DimensionManager;
 
 public class LotsOMobsBiomes 
 {
@@ -38,21 +39,27 @@ public class LotsOMobsBiomes
 		public static  BiomeGenBase modBiomeIceOcean;
 		public static  BiomeGenBase modBiomeIceIslands;
 		public static  BiomeGenBase modBiomeTropical;
+		//public static  BiomeGenBase modBiomeOceanForrest;
 
 	public static void Init()
 	{
 		//Biomes
 	if(ConfigHandler.newBiomes)
 	{ 
+		System.out.println("Registring Biomes");
 		 modBiomeAntartica = new BiomeGenAntartica(ConfigHandler.AntarticaID).setColor(747097).setBiomeName("Antartica");
 		 modBiomeArcticOcean = new BiomeGenArcticOcean(ConfigHandler.ArcticOceanID).setColor(747097).setBiomeName("Arctic Ocean");
 		 modBiomeTropical = new BiomeGenTropical(ConfigHandler.TropicBeachID).setColor(747097).setBiomeName("Tropical Beach");
-		 
+		 //modBiomeOceanForrest = new BiomeGenOceanForrest(ConfigHandler.OceanForrestID).setColor(747097).setBiomeName("Ocean Forrest");
+		 //BiomeEntry OceanForrest = new BiomeEntry(modBiomeOceanForrest,100);
 
+/*
 		 BiomeManager.icyBiomes.add(new BiomeEntry(modBiomeAntartica, 50));
-		 
-		 //BiomeManager.oceanBiomes.add(modBiomeTropical);
+		 BiomeManager.oceanBiomes.add(modBiomeTropical);
+		 //BiomeManager.oceanBiomes.add(modBiomeOceanForrest);
+		 //BiomeManager.addBiome(BiomeManager.BiomeType.WARM, OceanForrest);
 		 BiomeManager.warmBiomes.add(new BiomeEntry(modBiomeTropical, 50));
+		 //BiomeManager.warmBiomes.add(new BiomeEntry(modBiomeOceanForrest, 500));
 		 
 		 BiomeManager.oceanBiomes.add(modBiomeArcticOcean);
 		 
@@ -60,7 +67,8 @@ public class LotsOMobsBiomes
 		 BiomeManager.addSpawnBiome(modBiomeTropical);
 		 
 		 BiomeDictionary.registerBiomeType(modBiomeAntartica, Type.WASTELAND);
-		 BiomeDictionary.registerBiomeType(modBiomeTropical, Type.BEACH);
+		 BiomeDictionary.registerBiomeType(modBiomeTropical, Type.OCEAN);
+		 //BiomeDictionary.registerBiomeType(modBiomeOceanForrest, Type.OCEAN);*/
 	}
 		 
 //Dimensions

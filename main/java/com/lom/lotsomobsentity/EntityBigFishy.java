@@ -23,7 +23,6 @@ public class EntityBigFishy extends EntityFriendlyWater {
       this.setSize(0.5F, 0.5F);
       this.textureID = rand.nextInt(4)+1;
       this.scales = ((float)(rand.nextInt(5)+2))/2;
-      System.out.println(textureID);
    }
 
    protected void func_110147_ax() {

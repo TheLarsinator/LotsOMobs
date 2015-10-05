@@ -141,6 +141,7 @@ public class ConfigHandler
 	public static int DinoTerrainID = 42;
 	public static int IceAgeTerrainID = 47;
 	public static int TropicBeachID = 55;
+	public static int OceanForrestID = 56;
 	
 	//Other Configs
 	public static int knifeDamage = 100;
@@ -283,6 +284,7 @@ public class ConfigHandler
 				+ "empty as well since LotsOMobs adds 5 Dino Biomes");
 		IceAgeTerrainID = config.getInt("IceAgeTerrainID", "biome", IceAgeTerrainID, 0, Integer.MAX_VALUE, "IceAgeTerrain ID, also keep 3 IDs empty after this one");
 		TropicBeachID = config.getInt("TropicBeachID", "biome", TropicBeachID, 0, Integer.MAX_VALUE, "TropicBeach ID");
+		OceanForrestID = config.getInt("OceanForrestID", "biome", OceanForrestID, 0, Integer.MAX_VALUE, "OceanForrest ID");
 
 		dimension = config.getInt("Dino Dimension ID", "dimension", dimension, -100, Integer.MAX_VALUE, "Dino ID");
 		dimension2 = config.getInt("Ice Dimension ID", "dimension", dimension2, -100, Integer.MAX_VALUE, "Ice Age ID");
