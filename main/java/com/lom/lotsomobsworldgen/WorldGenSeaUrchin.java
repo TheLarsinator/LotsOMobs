@@ -23,7 +23,7 @@ public class WorldGenSeaUrchin extends WorldGenerator
 	      {
 	    	  return false;
 	      }
-	      	if((rand.nextInt(9)+1) <= 6)
+	      	if((rand.nextInt(9)+1) <= 7)
 	    	  world.setBlock(i, j, k, LotsOMobsBlocks.SeaUrchin);
 	      	else
 	      		world.setBlock(i, j, k, LotsOMobsBlocks.Starfish);
